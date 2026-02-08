@@ -17,175 +17,196 @@ export default function HeroSection() {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <section className="relative pt-24 md:pt-32 pb-12 md:pb-20 px-4 overflow-hidden bg-gradient-to-br from-teal-50 via-white to-cyan-50">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-teal-500 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-400 rounded-full filter blur-3xl"></div>
+    <section className="relative min-h-screen flex items-start overflow-hidden mt-20 md:mt-24">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/main.png"
+          alt="비버스케어 메인 배경"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
-      <div className="container mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
-          {/* Left Content */}
-          <div className="text-left space-y-6 lg:col-span-2">
-            <div 
-              className={`inline-block bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-700 ${
-                isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+      <div className="container mx-auto px-4 relative z-10 pt-32 md:pt-40">
+        <div className="flex justify-between items-start">
+          {/* 왼쪽 상단 - 로고 이미지와 파트너사 */}
+          <div 
+            className={`flex flex-col items-start gap-4 transition-all duration-700 ${
+              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+            }`}
+          >
+            <div className="flex items-center gap-3 p-3 rounded-lg">
+              <div className="rounded px-3 py-1.5 flex items-center justify-center">
+                <div className="relative w-32 h-12">
+                  <Image
+                    src="/samsung_logo.png"
+                    alt="삼성"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+              <div className="rounded-full w-16 h-16 flex items-center justify-center p-1">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/lg_logo.png"
+                    alt="LG"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+              <div className="rounded px-3 py-1.5 flex items-center justify-center">
+                <div className="relative w-24 h-12">
+                  <Image
+                    src="/전자랜드_logo.png"
+                    alt="전자랜드"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            <h3 
+              className={`text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-white transition-all duration-1000 delay-300 ${
+                isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              ✨ 병원·관공서가 선택한 전문 업체
+              비버스케어 임직원의 10년 발자취
+            </h3>
+          </div>
+
+          {/* 우상단 메인 텍스트 */}
+          <div className="max-w-5xl text-right">
+            <div 
+              className={`text-teal-400 text-3xl md:text-4xl lg:text-5xl font-bold mb-6 transition-all duration-700 delay-100 ${
+                isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}
+            >
+              숨쉬는 공기, 케어의 기준
             </div>
             
             <h1 
-              className={`text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900 transition-all duration-1000 delay-200 ${
+              className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white mb-2 whitespace-nowrap transition-all duration-1000 delay-200 ${
                 isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              프리미엄<br />
-              냉난방기 위생관리,<br />
-              <span className="text-teal-600 relative">
-                비버스케어
-                <span className="absolute -bottom-2 left-0 w-full h-3 bg-teal-300 opacity-30 -z-10"></span>
-              </span>
+              가전을 아는 전문가가 케어합니다.
             </h1>
             
-            <p 
-              className={`text-lg md:text-xl text-gray-600 transition-all duration-1000 delay-400 ${
+            <h2 
+              className={`text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white transition-all duration-1000 delay-300 ${
                 isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              시스템 에어컨 청소부터 소독·방역까지<br />
-              안전하고 깨끗하게 관리해드립니다
-            </p>
-
-            <div 
-              className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-600 ${
-                isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-            >
-              <button 
-                onClick={scrollToContact}
-                className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-yellow-500 transition-all transform hover:scale-105 shadow-lg"
-              >
-                바로 시작하기
-              </button>
-              <button 
-                onClick={() => {
-                  const element = document.getElementById('about');
-                  if (element) element.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="bg-white text-gray-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-50 transition-all border-2 border-gray-300"
-              >
-                더 알아보기
-              </button>
-            </div>
-
-            {/* Quick Contact - 임시 비활성화 (나중에 사용 예정) */}
-            <div 
-              className={`flex items-center gap-4 pt-4 transition-all duration-1000 delay-800 ${
-                isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-            >
-              <div 
-                className="flex items-center gap-2 text-gray-700 pointer-events-none"
-              >
-                <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
-                  💬
-                </div>
-                <span className="font-semibold">카카오 상담</span>
-              </div>
-              <div 
-                className="flex items-center gap-2 text-gray-700 pointer-events-none"
-              >
-                <div className="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center">
-                  📞
-                </div>
-                <span className="font-semibold">02-1234-5678</span>
-              </div>
-
-            </div>
+              병원·관공서 위생관리 파트너,<br />
+              <span className="text-teal-400">비버스케어</span>
+            </h2>
           </div>
+        </div>
 
-          {/* Right Image */}
+        {/* 오른쪽 하단 고정 버튼들 */}
+        <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-3">
+          {/* 전화 버튼 */}
           <div 
-            className={`relative h-[400px] md:h-[500px] lg:h-[600px] lg:col-span-3 transition-all duration-1000 delay-400 ${
+            className={`bg-gray-700/90 backdrop-blur-sm text-white px-4 py-3 rounded-full shadow-2xl flex items-center gap-3 transition-all duration-1000 delay-400 ${
               isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
             }`}
           >
-            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl lg:-mr-12">
-              <Image
-                src="/hero_image.jpg"
-                alt="비버스케어 전문 팀"
-                fill
-                className="object-cover object-center"
-                priority
-              />
-              
-              {/* Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-              
-              {/* Floating Badge */}
-              {/* <div className="absolute bottom-8 right-8 bg-white rounded-2xl p-6 shadow-xl">
-                <div className="flex items-center gap-2 mb-2">
-                  <Image
-                    src="/logo_icon.png"
-                    alt="비버스케어 로고"
-                    width={40}
-                    height={40}
-                    className="object-contain"
-                  />
-                  <div>
-                    <div className="font-bold text-gray-900">BEAVERS</div>
-                    <div className="text-sm text-teal-600">CARE</div>
-                  </div>
-                </div>
-                <p className="text-sm text-gray-700">
-                  안전하고 깨끗하게 관리합니다!
-                </p>
-                <div className="flex gap-2 mt-3">
-                  <button className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
-                    Daily
-                  </button>
-                  <button className="bg-teal-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-teal-600 transition-colors">
-                    Weekly
-                  </button>
-                </div>
-              </div> */}
+            <div className="flex items-center gap-2">
+              <div className="w-15 h-15 flex items-center justify-center overflow-hidden">
+                <Image
+                  src="/logo.png"
+                  alt="비버스케어"
+                  width={64}
+                  height={64}
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <div className="text-xs text-gray-300">바로견적</div>
+                <div className="font-bold text-xl">1899-7026</div>
+              </div>
+            </div>
+            <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
+              <svg className="w-6 h-6" fill="white" viewBox="0 0 24 24">
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+              </svg>
             </div>
           </div>
+
+          {/* 카카오톡 상담 버튼 */}
+          <a
+            href="https://pf.kakao.com/_PrKhX/chat"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`bg-black text-yellow-400 px-5 py-2.5 rounded-full font-bold shadow-2xl hover:bg-gray-900 transition-all flex items-center justify-start gap-8 duration-1000 delay-500 ${
+              isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
+            }`}
+          >
+            <div className="relative w-8 h-8 flex-shrink-0">
+                  <Image
+                    src="/kakao_logo.png"
+                    alt="비버스케어 카카오톡 상담문의"
+                    fill
+                    className="object-contain"
+                  />
+            </div> 
+            <div className="flex gap-1">
+              <span className="text-sm">카카오톡</span>
+              <span className="text-sm">상담문의</span>
+            </div>
+          </a>
+
+          {/* Blog & TOP 버튼 */}
+          <div className="flex gap-3">
+            {/* Blog 버튼 */}
+            <a
+              href="https://blog.naver.com/green_luck22"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`bg-green-500 text-white p-4 rounded-full font-bold shadow-2xl hover:bg-green-600 transition-all flex items-center justify-center duration-1000 delay-600 w-20 h-20 ${
+                isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
+              }`}
+            >
+              <div className="flex flex-col items-center">
+                <div className="relative w-14 h-14">
+                  <Image
+                    src="/blog_logo.png"
+                    alt="비버스케어 블로그"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </a>
+
+            {/* TOP 버튼 */}
+            <button
+              onClick={scrollToTop}
+              className={`bg-teal-600 text-white p-4 rounded-full font-bold shadow-2xl hover:bg-teal-700 transition-all flex items-center justify-center duration-1000 delay-700 w-20 h-20 ${
+                isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
+              }`}
+              aria-label="맨 위로"
+            >
+              <div className="flex flex-col items-center">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                </svg>
+                <span className="text-xs mt-1 font-bold">TOP</span>
+              </div>
+            </button>
+          </div>
         </div>
 
-        {/* Trust Badges - Mobile */}
-        <div 
-          className={`grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 lg:hidden transition-all duration-1000 delay-1000 ${
-            isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-          }`}
-        >
-          <div className="bg-white p-4 rounded-lg shadow-sm text-center">
-            <div className="text-2xl font-bold text-teal-600">500+</div>
-            <div className="text-sm text-gray-600">누적 작업</div>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-sm text-center">
-            <div className="text-2xl font-bold text-teal-600">98%</div>
-            <div className="text-sm text-gray-600">만족도</div>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-sm text-center">
-            <div className="text-2xl font-bold text-teal-600">100+</div>
-            <div className="text-sm text-gray-600">병원·관공서</div>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-sm text-center">
-            <div className="text-2xl font-bold text-teal-600">A/S</div>
-            <div className="text-sm text-gray-600">완벽 보증</div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
-          <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div> */}
       </div>
     </section>
   );

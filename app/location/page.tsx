@@ -85,16 +85,16 @@ export default function LocationPage() {
                   </h2>
                   <div className="space-y-2">
                     <a 
-                      href="tel:02-1234-5678"
+                      href="tel:1899-7026"
                       className="flex items-center gap-2 text-teal-600 hover:text-teal-700 font-semibold"
                     >
-                      전화: 02-1234-5678
+                      전화: 1899-7026
                     </a>
                     <a 
-                      href="mailto:info@beaverscare.com"
+                      href="beaverscare01@gmail.com"
                       className="flex items-center gap-2 text-teal-600 hover:text-teal-700 font-semibold"
                     >
-                      이메일: info@beaverscare.com
+                      이메일: beaverscare01@gmail.com
                     </a>
                   </div>
                 </div>

@@ -37,8 +37,8 @@ export default function Footer() {
             <div className="space-y-2 text-sm">
               <p className="flex items-center gap-2">
                 <span>📞</span>
-                <a href="tel:02-1234-5678" className="hover:text-white transition-colors">
-                  02-1234-5678
+                <a href="tel:1899-7026" className="hover:text-white transition-colors">
+                  1899-7026
                 </a>
               </p>
               <p className="flex items-center gap-2">
@@ -49,8 +49,8 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <span>✉️</span>
-                <a href="mailto:info@beaverscare.com" className="hover:text-white transition-colors">
-                  info@beaverscare.com
+                <a href="mailto:beaverscare01@gmail.com " className="hover:text-white transition-colors">
+                beaverscare01@gmail.com 
                 </a>
               </p>
             </div>
