@@ -9,47 +9,31 @@ export default function AboutSection() {
           <AnimatedSection animation="fade-up">
             <div className="text-center max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight text-gray-900">
-              비버스케어,<br />
-              <span className="text-teal-600">전문성과 신뢰</span>로 함께합니다
+              가장 취약한 곳이 기준이 됩니다,<br />
+              <span className="text-teal-600">의료시설 주준의 정밀 세척&소독방역 솔루션</span>
             </h2>
             
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              비버스케어는 병원, 관공서, 학교, 기업 등 다양한 시설의 에어컨 청소 및 
-              실내 공기질 관리를 전문으로 하는 업체입니다. 
-              체계적인 작업 프로세스와 전문 장비로 고객님의 건강한 실내 환경을 책임집니다.
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+              아들과의 긴 입원 생활 중 목격한 오염된 공기가 환아와 간병인들에게 
+              미치는 영향을 보며 결심했습니다. 
+            </p>
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+              비버스케어는 그 어떤 공간이라도 가장 엄격한 의료 현장의 기준으로 관리합니다
             </p>
             </div>
           </AnimatedSection>
         </div>
 
-        {/* Video Section - Full Width with Scroll Expand Animation */}
-        <div className="mb-16">
-          <AnimatedSection animation="scale-expand" delay={0}>
-            <div className="relative w-full overflow-hidden shadow-2xl bg-gradient-to-br from-teal-50 to-cyan-50 p-1">
-              <div className="relative w-full bg-black" style={{ paddingBottom: '56.25%' }}>
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full pointer-events-none"
-                  src="https://www.youtube.com/embed/0PzYE3aQ5y4?controls=0&rel=0&playsinline=1&cc_load_policy=0&autoplay=1&mute=1&loop=1&playlist=0PzYE3aQ5y4&enablejsapi=1"
-                  title="비버스케어 소개 영상"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-
         {/* Stats */}
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 mb-16">
           <AnimatedSection animation="zoom-in" delay={200}>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="bg-teal-50 p-8 rounded-2xl text-center">
-              <div className="text-4xl font-bold text-teal-600 mb-2">8년+</div>
+              <div className="text-4xl font-bold text-teal-600 mb-2">4년+</div>
               <div className="text-gray-700 font-medium">업계 경력</div>
             </div>
             <div className="bg-teal-50 p-8 rounded-2xl text-center">
-              <div className="text-4xl font-bold text-teal-600 mb-2">500+</div>
+              <div className="text-4xl font-bold text-teal-600 mb-2">1000+</div>
               <div className="text-gray-700 font-medium">누적 작업 건수</div>
             </div>
             <div className="bg-teal-50 p-8 rounded-2xl text-center">
@@ -62,6 +46,28 @@ export default function AboutSection() {
             </div>
             </div>
           </AnimatedSection>
+        </div>
+
+        {/* Video Section - Full Width with Scroll Expand Animation */}
+        <div className="mb-16">
+          <AnimatedSection animation="scale-expand" delay={0}>
+            <div className="relative w-full overflow-hidden shadow-2xl bg-gradient-to-br from-teal-50 to-cyan-50 p-1">
+              <div className="relative w-full bg-black" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full pointer-events-none"
+                  src="https://www.youtube.com/embed/0KsozVJ2c0E?controls=0&rel=0&playsinline=1&cc_load_policy=0&autoplay=1&mute=1&loop=1&playlist=0KsozVJ2c0E&enablejsapi=1"
+                  title="비버스케어 소개 영상"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+
+        {/* Stats */}
+        <div className="container mx-auto px-4">
 
           {/* Features */}
           <AnimatedSection animation="fade-up" delay={400}>

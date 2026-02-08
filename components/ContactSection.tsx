@@ -51,7 +51,7 @@ export default function ContactSection() {
               
               {/* Phone */}
               <a 
-                href="tel:02-1234-5678"
+                href="tel:1899-7026"
                 className="flex items-center gap-4 p-4 bg-teal-50 rounded-xl hover:bg-teal-100 transition-colors mb-4"
               >
                 <div className="w-14 h-14 bg-teal-600 rounded-full flex items-center justify-center text-2xl">
@@ -59,14 +59,14 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 mb-1">전화 문의</div>
-                  <div className="text-xl font-bold text-teal-600">02-1234-5678</div>
+                  <div className="text-xl font-bold text-teal-600">1899-7026</div>
                   <div className="text-xs text-gray-500">평일 09:00 - 18:00</div>
                 </div>
               </a>
 
               {/* KakaoTalk */}
               <a 
-                href="https://pf.kakao.com/_your_kakao_channel"
+                href="https://pf.kakao.com/_PrKhX/chat"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 bg-yellow-50 rounded-xl hover:bg-yellow-100 transition-colors mb-4"
@@ -91,7 +91,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 mb-1">이메일 문의</div>
-                  <div className="text-lg font-bold text-teal-700">info@beaverscare.com</div>
+                  <div className="text-lg font-bold text-teal-700">beaverscare01@gmail.com</div>
                   <div className="text-xs text-gray-500">영업일 기준 24시간 내 답변</div>
                 </div>
               </a>
@@ -111,7 +111,7 @@ export default function ContactSection() {
                 </div>
                 <div className="flex justify-between">
                   <span>일요일/공휴일</span>
-                  <span className="font-semibold">휴무</span>
+                  <span className="font-semibold">변동</span>
                 </div>
               </div>
               <p className="mt-4 text-sm text-teal-100">
@@ -212,9 +212,9 @@ export default function ContactSection() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows={4}
+                  rows={5}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                  placeholder="작업 장소, 에어컨 대수, 원하시는 작업일 등을 자세히 적어주시면 더 정확한 견적을 드릴 수 있습니다."
+                  placeholder={"견적 요청 시 다음 4가지만 보내주시면 빠르게 안내드리겠습니다.\n 1) 시설 유형\n 2) 대략적인 대수\n 3) 희망일정\n 4) 특이사항(누수, 냄새, 곰팡이, 고장 등)"}
                 />
               </div>
 
