@@ -7,16 +7,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
             <h3 className="text-white text-xl font-bold mb-4">Beavers Care</h3>
-            <p className="text-sm mb-2">경기도 시흥시 시청로 25 시티프론트561, 429호</p>
+            <p className="text-sm mb-2">본사 : 경기도 시흥시 시청로 25 시티프론트561, 429호</p>
+            <p className="text-sm mb-2">인천점 : 인천 연수구 컨벤시아대로 80, 401동 1층</p>
             <p className="text-sm mb-2">대표 : 송대복 김송이</p>
-            <p className="text-sm mb-2">사업자등록번호 : -</p>
-            <p className="text-sm mb-2">통신판매등록번호 : -</p>
+            <p className="text-sm mb-2">사업자등록번호 : 613-23-67112</p>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-4">문의</h4>
-            <p className="text-sm mb-2">TEL : -</p>
-            <p className="text-sm mb-2">FAX : -</p>
-            <p className="text-sm mb-2">E-mail : -</p>
+            <p className="text-sm mb-2">TEL : 1899-7026 / 010-4768-7026</p>
+            <p className="text-sm mb-2">FAX : 0504-142-7026</p>
+            <p className="text-sm mb-2">E-mail : beaverscare0204@gmail.com</p>
           </div>
         </div>
 

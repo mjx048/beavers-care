@@ -63,18 +63,18 @@ export default function WorkHistorySection() {
                 modules={[Autoplay]}
                 direction="vertical"
                 spaceBetween={20}
-                slidesPerView={2}
+                slidesPerView={3}
                 autoplay={{
                   delay: 3000,
                   disableOnInteraction: false,
                 }}
                 loop={true}
-                className="h-[600px]"
-                style={{ height: '600px' }}
+                className="h-[900px]"
+                style={{ height: '900px' }}
               >
                 {workImages.map((image, index) => (
                   <SwiperSlide key={index}>
-                    <div className="relative w-full h-[280px] rounded-lg overflow-hidden shadow-lg bg-gray-100">
+                    <div className="relative w-full h-[300px] rounded-lg overflow-hidden shadow-lg bg-gray-100">
                       <Image
                         src={image}
                         alt={`작업 사진 ${index + 1}`}

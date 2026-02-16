@@ -11,25 +11,25 @@ export default function QuickMenu() {
     {
       icon: '/quickMenu/menu_email.png',
       label: '견적문의',
-      href: '#contact',
+      href: '#contact', // 문의 섹션 주소로 변경 필요
       bgColor: '#FFFFFF',
     },
     {
       icon: '/quickMenu/menu_kakaotalk.png',
       label: '카톡상담',
-      href: 'https://pf.kakao.com/_xnxnxnx', // 실제 카카오톡 채널 주소로 변경 필요
+      href: 'https://pf.kakao.com/_PrKhX', // 실제 카카오톡 채널 주소로 변경 필요
       bgColor: '#ffe600',
     },
     {
       icon: '/quickMenu/menu_call.png',
       label: '전화',
-      href: 'tel:010-0000-0000', // 실제 전화번호로 변경 필요
+      href: 'tel:1899-7026', // 실제 전화번호로 변경 필요
       bgColor: '#39b54a',
     },
     {
       icon: '/quickMenu/menu_naverblog.png',
       label: '블로그',
-      href: 'https://blog.naver.com/', // 실제 블로그 주소로 변경 필요
+      href: 'https://blog.naver.com/beaverscare', // 실제 블로그 주소로 변경 필요
       bgColor: '#30b14a',
     },
   ];

@@ -16,11 +16,8 @@ export default function ClientSection() {
     { src: '/client/logo/더원한방병원.png', alt: '더원 한방병원' },
     { src: '/client/logo/땅스부대찌게.png', alt: '땅스부대찌개' },
     { src: '/client/logo/맑은위내과.png', alt: '맑은위 내과' },
-    { src: '/client/logo/삼성로고.png', alt: '삼성' },
     { src: '/client/logo/썬벨팬션.png', alt: '썬벨 펜션' },
-    { src: '/client/logo/엘지.png', alt: 'LG' },
     { src: '/client/logo/웰손병원.png', alt: '웰손 병원' },
-    { src: '/client/logo/전자랜드.png', alt: '전자랜드' },
     { src: '/client/logo/코스트코.png', alt: '코스트코' },
     { src: '/client/logo/크린토피아.png', alt: '크린토피아' },
   ];
