@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import QuickMenu from "@/components/QuickMenu";
 
 export const metadata: Metadata = {
   title: "Beavers Care - 위생 파트너",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        {children}
+        <QuickMenu />
+      </body>
     </html>
   );
 }

@@ -13,15 +13,15 @@ export default function HeroSection() {
   const heroSlides = [
     {
       text: '원하지 않는\n침입자를\n차단하고 싶을 때',
-      bgImage: '/no_image.jpg',
+      bgImage: '/mainBanner/main_1.png',
     },
     {
       text: '든든한\n위생파트너가\n필요할 때',
-      bgImage: '/no_image.jpg',
+      bgImage: '/mainBanner/main_2.png',
     },
     {
       text: '성공한\n옆집이\n부러울 때',
-      bgImage: '/no_image.jpg',
+      bgImage: '/mainBanner/main_3.png',
     },
   ];
 

@@ -18,60 +18,38 @@ export default function Header() {
               alt="Beavers Care" 
               width={180} 
               height={48}
-              className="h-12 w-auto"
+              className="h-20 w-auto"
               priority
             />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#intro" className="text-gray-700 hover:text-primary transition">
-              Beavers Care 소개
+            <Link href="/introduce" className="text-gray-700 hover:text-primary transition">
+              소개
             </Link>
             <div className="relative group">
               <button className="text-gray-700 hover:text-primary transition">
                 솔루션소개
               </button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                <Link href="#solution-pest" className="block px-4 py-3 hover:bg-gray-100">
-                  해충방제 솔루션
+                <Link href="/solution/aircon" className="block px-4 py-3 hover:bg-gray-100">
+                  에어컨전문세척
                 </Link>
-                <Link href="#solution-disinfection" className="block px-4 py-3 hover:bg-gray-100">
-                  표면소독 솔루션
+                <Link href="/solution/disinfection" className="block px-4 py-3 hover:bg-gray-100">
+                  소독 방역
                 </Link>
-                <Link href="#solution-aircon" className="block px-4 py-3 hover:bg-gray-100">
-                  에어컨전문세척 솔루션
-                </Link>
-                <Link href="#solution-air" className="block px-4 py-3 hover:bg-gray-100">
-                  실내공기질 솔루션
+                <Link href="/solution/quarantinePackage" className="block px-4 py-3 hover:bg-gray-100">
+                  에어컨 방역패키지
                 </Link>
               </div>
             </div>
-            <Link href="#portfolio" className="text-gray-700 hover:text-primary transition">
+            <Link href="https://blog.naver.com/beaverscare" className="text-gray-700 hover:text-primary transition" target="_blank" rel="noopener noreferrer">
               포트폴리오
             </Link>
-            <div className="relative group">
-              <button className="text-gray-700 hover:text-primary transition">
-                증명서 발급
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                <Link href="#certificate" className="block px-4 py-3 hover:bg-gray-100">
-                  증명서 발급
-                </Link>
-                <Link href="#contract" className="block px-4 py-3 hover:bg-gray-100">
-                  계약 정보 확인
-                </Link>
-                <Link href="#payment" className="block px-4 py-3 hover:bg-gray-100">
-                  결제 정보
-                </Link>
-                <Link href="#report" className="block px-4 py-3 hover:bg-gray-100">
-                  솔루션 리포트
-                </Link>
-                <Link href="#disinfection-cert" className="block px-4 py-3 hover:bg-gray-100">
-                  소독증명서
-                </Link>
-              </div>
-            </div>
+            <Link href="/certificate" className="text-gray-700 hover:text-primary transition">
+              증명서발급
+            </Link>
           </nav>
 
           {/* CTA Button */}
@@ -112,26 +90,26 @@ export default function Header() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden pb-4">
-            <Link href="#intro" className="block py-2 text-gray-700 hover:text-primary">
-              Beavers Care 소개
+            <Link href="/introduce" className="block py-2 text-gray-700 hover:text-primary">
+              소개
             </Link>
             <div className="py-2">
               <p className="font-semibold text-gray-700">솔루션소개</p>
-              <Link href="#solution-pest" className="block pl-4 py-1 text-gray-600">
-                해충방제 솔루션
+              <Link href="/solution/aircon" className="block pl-4 py-1 text-gray-600">
+                에어컨전문세척
               </Link>
-              <Link href="#solution-disinfection" className="block pl-4 py-1 text-gray-600">
-                표면소독 솔루션
+              <Link href="/solution/disinfection" className="block pl-4 py-1 text-gray-600">
+                소독 방역
               </Link>
-              <Link href="#solution-aircon" className="block pl-4 py-1 text-gray-600">
-                에어컨전문세척 솔루션
-              </Link>
-              <Link href="#solution-air" className="block pl-4 py-1 text-gray-600">
-                실내공기질 솔루션
+              <Link href="/solution/quarantinePackage" className="block pl-4 py-1 text-gray-600">
+                에어컨 방역패키지
               </Link>
             </div>
-            <Link href="#portfolio" className="block py-2 text-gray-700 hover:text-primary">
+            <Link href="https://blog.naver.com/beaverscare" className="block py-2 text-gray-700 hover:text-primary" target="_blank" rel="noopener noreferrer">
               포트폴리오
+            </Link>
+            <Link href="/certificate" className="block py-2 text-gray-700 hover:text-primary">
+              증명서발급
             </Link>
             <button className="w-full mt-4 bg-primary text-white px-6 py-3 rounded-md hover:bg-primary/90 transition">
               무료진단 문의하기

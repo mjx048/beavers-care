@@ -69,7 +69,7 @@ beaverscare/
 │   ├── Header.tsx
 │   ├── Footer.tsx
 │   ├── HeroSection.tsx
-│   ├── CorporationSection.tsx
+│   ├── HistoryßSection.tsx
 │   ├── MembersSection.tsx
 │   ├── ClientSection.tsx
 │   ├── SolutionSection.tsx
