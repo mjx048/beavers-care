@@ -208,7 +208,8 @@ export default function CertificateRequestSection() {
 
                 {/* Submit Button */}
                 <button
-                  type="submit"
+                  type="button"
+                  onClick={() => alert('준비 중입니다.')}
                   className="w-full bg-primary text-white py-4 rounded-md hover:bg-primary/90 transition font-semibold text-lg"
                 >
                   요청하기
