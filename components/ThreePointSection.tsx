@@ -35,7 +35,7 @@ export default function ThreePointSection() {
         >
           <p className="text-primary font-semibold mb-2">3 Point</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
-            3가지 핵심 포인트
+            비버스케어를 선택해야하는 3가지 이유
           </h2>
         </motion.div>
 

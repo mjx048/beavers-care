@@ -29,29 +29,29 @@ export default function BeliefSection() {
   ];
 
   return (
-    <section ref={ref} className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section ref={ref} className="py-16 bg-gray-50">
+      <div className="mx-auto px-6 max-w-screen-2xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-4"
         >
           <p className="text-primary font-semibold mb-2">Belief</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             고객 신뢰와 만족
           </h2>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-8 items-center">
-          {/* Left: Popup Image (3/4) */}
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          {/* Left: Popup Image (1/2) */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="lg:w-3/4 w-full"
+            className="lg:w-1/2 w-full"
           >
-            <div className="relative w-full h-[400px] lg:h-[500px]">
+            <div className="relative w-full h-[600px] lg:h-[60vh]">
               <Image
                 src="/belief/popup/costco popup.png"
                 alt="고객 사례"
@@ -61,17 +61,17 @@ export default function BeliefSection() {
             </div>
           </motion.div>
 
-          {/* Right: Review Slider (1/4) */}
+          {/* Right: Review Slider (1/2) */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:w-1/4 w-full"
+            className="lg:w-1/2 w-full"
           >
             <Swiper
               modules={[Autoplay]}
-              spaceBetween={20}
-              slidesPerView={1}
+              spaceBetween={12}
+              slidesPerView={2}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
@@ -81,7 +81,7 @@ export default function BeliefSection() {
             >
               {reviewImages.map((image, index) => (
                 <SwiperSlide key={index}>
-                  <div className="relative w-full h-[380px] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-white">
+                  <div className="relative w-full h-[38vh] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-white">
                     <Image
                       src={image}
                       alt={`리뷰 ${index + 1}`}

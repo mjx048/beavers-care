@@ -12,15 +12,15 @@ export default function HeroSection() {
 
   const heroSlides = [
     {
-      text: '원하지 않는\n침입자를\n차단하고 싶을 때',
+      text: '병원 공기와\n위생 관리로\n안심을 더하다',
       bgImage: '/mainBanner/main_1.png',
     },
     {
-      text: '든든한\n위생파트너가\n필요할 때',
+      text: '아이들의\n공기와 위생,\n안심 학교의시작',
       bgImage: '/mainBanner/main_2.png',
     },
     {
-      text: '성공한\n옆집이\n부러울 때',
+      text: '쾌적한 공기와 위생,\n안심 건물의\n완성',
       bgImage: '/mainBanner/main_3.png',
     },
   ];

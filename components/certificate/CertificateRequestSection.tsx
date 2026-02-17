@@ -75,21 +75,7 @@ export default function CertificateRequestSection() {
               <div className="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 3
               </div>
-              <h4 className="font-bold text-gray-800 mb-2">증명서 발급조회</h4>
-              <div className="h-10"></div>
-            </div>
-
-            {/* Arrow 3 */}
-            <div className="text-primary text-4xl font-bold mb-20">
-              &gt;
-            </div>
-
-            {/* Step 4 */}
-            <div className="text-center">
-              <div className="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                4
-              </div>
-              <h4 className="font-bold text-gray-800 mb-2">다운로드</h4>
+              <h4 className="font-bold text-gray-800 mb-2">증명서 발송</h4>
               <div className="h-10"></div>
             </div>
           </div>
@@ -110,13 +96,13 @@ export default function CertificateRequestSection() {
                 {/* 증명서 종류 */}
                 <div>
                   <label className="block text-gray-700 font-semibold mb-2">증명서</label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                  <select defaultValue={"소독증명서"} className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
                     <option value="">선택하세요</option>
-                    <option value="계약정보확인">계약 정보 확인</option>
+                    {/* <option value="계약정보확인">계약 정보 확인</option>
                     <option value="결제정보">결제 정보</option>
-                    <option value="솔루션리포트">솔루션 리포트</option>
-                    <option value="소독증명서">소독증명서</option>
-                    <option value="기타">기타</option>
+                    <option value="솔루션리포트">솔루션 리포트</option> */}
+                    <option value="소독증명서">소독 증명서</option>
+                    {/* <option value="기타">기타</option> */}
                   </select>
                 </div>
 
@@ -229,8 +215,8 @@ export default function CertificateRequestSection() {
               <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">소독 증명서 샘플</h3>
               <div className="relative w-full h-[800px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/certificate/소독증명서샘플.png"
-                  alt="소독 증명서 샘플"
+                  src="/certificate/소독증명발급서.png"
+                  alt="소독증명발급서"
                   fill
                   className="object-contain"
                   priority
