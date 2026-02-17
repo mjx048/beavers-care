@@ -16,12 +16,12 @@ export default function ProcessSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-1">
             에어컨 세척 프로세스
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 text-lg mb-0">
             체계적이고 전문적인 5단계 세척 과정
           </p>
         </motion.div>
@@ -30,7 +30,7 @@ export default function ProcessSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-6xl mx-auto"
+          className="max-w-6xl mx-auto -mt-20"
         >
           <div className="relative w-full h-[600px] md:h-[800px] rounded-2xl overflow-hidden shadow-xl">
             <Image

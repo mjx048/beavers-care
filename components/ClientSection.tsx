@@ -12,13 +12,11 @@ export default function ClientSection() {
   const clientLogos = [
     { src: '/client/logo/ybm영어학원.png', alt: 'YBM 영어학원' },
     { src: '/client/logo/강한마디재활의학과.png', alt: '강한마디 재활의학과' },
-    { src: '/client/logo/대우.png', alt: '대우' },
     { src: '/client/logo/더원한방병원.png', alt: '더원 한방병원' },
     { src: '/client/logo/땅스부대찌게.png', alt: '땅스부대찌개' },
     { src: '/client/logo/맑은위내과.png', alt: '맑은위 내과' },
     { src: '/client/logo/썬벨팬션.png', alt: '썬벨 펜션' },
     { src: '/client/logo/웰손병원.png', alt: '웰손 병원' },
-    { src: '/client/logo/코스트코.png', alt: '코스트코' },
     { src: '/client/logo/크린토피아.png', alt: '크린토피아' },
   ];
 
@@ -33,7 +31,7 @@ export default function ClientSection() {
         >
           <p className="text-primary font-semibold mb-2">Client</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-            단, 3년만에 ____건의 프로젝트 성공경험
+            단, 3년만에 1,000건 이상 프로젝트 성공경험
           </h2>
         </motion.div>
 
