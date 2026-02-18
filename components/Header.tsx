@@ -44,7 +44,7 @@ export default function Header() {
                 </Link>
               </div>
             </div>
-            <Link href="https://blog.naver.com/beaverscare" className="text-lg font-medium text-gray-700 hover:text-primary transition" target="_blank" rel="noopener noreferrer">
+            <Link href="https://blog.naver.com/beaverscare/224155958593" className="text-lg font-medium text-gray-700 hover:text-primary transition" target="_blank" rel="noopener noreferrer">
               포트폴리오
             </Link>
             <Link href="/certificate" className="text-lg font-medium text-gray-700 hover:text-primary transition">

@@ -30,16 +30,27 @@ export default function ProcessSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-6xl mx-auto -mt-20"
+          className="max-w-6xl mx-auto mt-8"
         >
-          <div className="relative w-full h-[600px] md:h-[800px] rounded-2xl overflow-hidden shadow-xl">
-            <Image
-              src="/solution/disinfection/소독방역과정.png"
-              alt="에어컨 세척 프로세스"
-              fill
-              className="object-contain"
-              priority
-            />
+          <div className="flex flex-col gap-6">
+            <div className="relative w-full h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-xl bg-[#d6eaf5]">
+              <Image
+                src="/solution/disinfection/소독방역_프로세스_1.jpg"
+                alt="소독 방역 프로세스 1"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            <div className="relative w-full h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-xl bg-[#d6eaf5]">
+              <Image
+                src="/solution/disinfection/소독방역_프로세스_2.jpg"
+                alt="소독 방역 프로세스 2"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </div>
         </motion.div>
       </div>

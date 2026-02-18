@@ -17,6 +17,7 @@ export default function WorkHistorySection() {
     '/solution/disinfection/소독방역2.png',
     '/solution/disinfection/소독방역3.png',
     '/solution/disinfection/소독방역4.png',
+    '/solution/disinfection/소독방역5.png',
   ];
 
   return (
@@ -31,20 +32,17 @@ export default function WorkHistorySection() {
             className="lg:w-1/2 w-full"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2 leading-relaxed">
-              방역전문 비버스케어
+              병원전문 비버스케어
             </h2>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2 leading-relaxed">
-              모든 곳을 가장 까다로운 <span style={{ color: 'var(--secondary-color)' }}>[병원]</span>
+              모든 곳을 
             </h2>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 leading-relaxed">
-              기준으로 작업합니다.
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2 leading-relaxed">
+              <span style={{ color: 'var(--secondary-color)' }}>[의료기관 인증(KOIHA기준)]</span>
             </h2>
-            <p className="text-gray-600 text-xl font-bold mb-4">
-              병원, 관공서, 학교, 기업 등
-            </p>
-            <p className="text-gray-800 text-2xl font-bold">
-              B2B 전문
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2 leading-relaxed">
+              으로 작업합니다.
+            </h2>
           </motion.div>
 
           {/* Right: Vertical Slider */}

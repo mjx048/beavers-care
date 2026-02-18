@@ -215,7 +215,7 @@ export default function CertificateRequestSection() {
               <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">소독 증명서 샘플</h3>
               <div className="relative w-full h-[800px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/certificate/소독증명발급서.png"
+                  src="/certificate/소독증명발급서_예시.png"
                   alt="소독증명발급서"
                   fill
                   className="object-contain"

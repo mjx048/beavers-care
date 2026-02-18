@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import HistorySection from '@/components/HistorySection';
 import CEOMessageSection from '@/components/CEOMessageSection';
 import BrandStorySection from '@/components/BrandStorySection';
+import CertificatesSection from '@/components/CertificatesSection';
 
 export default function IntroducePage() {
   return (
@@ -11,6 +12,7 @@ export default function IntroducePage() {
       <HistorySection />
       <CEOMessageSection />
       <BrandStorySection />
+      <CertificatesSection />
       <Footer />
     </main>
   );
