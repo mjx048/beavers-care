@@ -95,7 +95,7 @@ export default function Header() {
             </Link>
             <div className="py-2">
               <p className="font-semibold text-gray-700">솔루션소개</p>
-              <Link href="/solution/aircon" className="block pl-4 py-1 text-gray-600">
+              <Link href="/solution/airconCleaning" className="block pl-4 py-1 text-gray-600">
                 에어컨전문세척
               </Link>
               <Link href="/solution/disinfection" className="block pl-4 py-1 text-gray-600">
@@ -105,7 +105,7 @@ export default function Header() {
                 에어컨 방역패키지
               </Link>
             </div>
-            <Link href="https://blog.naver.com/beaverscare" className="block py-2 text-gray-700 hover:text-primary" target="_blank" rel="noopener noreferrer">
+            <Link href="https://blog.naver.com/beaverscare/224155958593" className="block py-2 text-gray-700 hover:text-primary" target="_blank" rel="noopener noreferrer">
               포트폴리오
             </Link>
             <Link href="/certificate" className="block py-2 text-gray-700 hover:text-primary">
