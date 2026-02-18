@@ -35,7 +35,7 @@ export default function BeliefSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-4"
+          className="text-center mb-16"
         >
           <p className="text-primary font-semibold mb-2">Belief</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -51,12 +51,12 @@ export default function BeliefSection() {
             transition={{ duration: 0.6 }}
             className="lg:w-1/2 w-full"
           >
-            <div className="relative w-full h-[600px] lg:h-[60vh]">
+            <div className="relative w-full h-[38vh]">
               <Image
                 src="/belief/popup/costco popup.png"
                 alt="고객 사례"
                 fill
-                className="object-contain drop-shadow-2xl"
+                className="object-cover drop-shadow-2xl"
               />
             </div>
           </motion.div>
