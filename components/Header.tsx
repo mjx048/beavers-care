@@ -53,9 +53,14 @@ export default function Header() {
           </nav>
 
           {/* CTA Button */}
-          <button className="hidden md:block bg-primary text-white px-7 py-3 text-lg rounded-md hover:bg-primary/90 transition">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeg4jP7pmOy9vavfiAsdZZhItECkeC30nsz68p2tSNwq0zD0g/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:block bg-primary text-white px-7 py-3 text-lg rounded-md hover:bg-primary/90 transition"
+          >
             무료진단 문의하기
-          </button>
+          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -111,9 +116,14 @@ export default function Header() {
             <Link href="/certificate" className="block py-2 text-gray-700 hover:text-primary">
               증명서발급
             </Link>
-            <button className="w-full mt-4 bg-primary text-white px-6 py-3 rounded-md hover:bg-primary/90 transition">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeg4jP7pmOy9vavfiAsdZZhItECkeC30nsz68p2tSNwq0zD0g/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full mt-4 bg-primary text-white px-6 py-3 rounded-md hover:bg-primary/90 transition text-center"
+            >
               무료진단 문의하기
-            </button>
+            </a>
           </div>
         )}
       </div>

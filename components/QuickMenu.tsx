@@ -11,7 +11,7 @@ export default function QuickMenu() {
     {
       icon: '/quickMenu/request-quote-logo.png',
       label: '견적문의',
-      href: '#contact', // 문의 섹션 주소로 변경 필요
+      href: 'https://docs.google.com/forms/d/e/1FAIpQLSeg4jP7pmOy9vavfiAsdZZhItECkeC30nsz68p2tSNwq0zD0g/viewform?usp=publish-editor',
       bgColor: '#FFFFFF',
     },
     {
