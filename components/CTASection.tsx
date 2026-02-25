@@ -24,9 +24,14 @@ export default function CTASection() {
             간편 견적 문의를 남겨주시면<br />
             빠른 시일 내에 연락드리겠습니다.
           </p>
-          <button className="bg-white text-primary px-8 py-4 rounded-md font-semibold hover:bg-gray-100 transition text-lg">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeg4jP7pmOy9vavfiAsdZZhItECkeC30nsz68p2tSNwq0zD0g/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-primary px-8 py-4 rounded-md font-semibold hover:bg-gray-100 transition text-lg"
+          >
             무료진단 문의하기
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

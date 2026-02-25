@@ -44,7 +44,7 @@ export default function Header() {
                 </Link>
               </div>
             </div>
-            <Link href="https://blog.naver.com/beaverscare" className="text-lg font-medium text-gray-700 hover:text-primary transition" target="_blank" rel="noopener noreferrer">
+            <Link href="https://blog.naver.com/beaverscare/224155958593" className="text-lg font-medium text-gray-700 hover:text-primary transition" target="_blank" rel="noopener noreferrer">
               포트폴리오
             </Link>
             <Link href="/certificate" className="text-lg font-medium text-gray-700 hover:text-primary transition">
@@ -53,9 +53,14 @@ export default function Header() {
           </nav>
 
           {/* CTA Button */}
-          <button className="hidden md:block bg-primary text-white px-7 py-3 text-lg rounded-md hover:bg-primary/90 transition">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeg4jP7pmOy9vavfiAsdZZhItECkeC30nsz68p2tSNwq0zD0g/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:block bg-primary text-white px-7 py-3 text-lg rounded-md hover:bg-primary/90 transition"
+          >
             무료진단 문의하기
-          </button>
+          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -95,7 +100,7 @@ export default function Header() {
             </Link>
             <div className="py-2">
               <p className="font-semibold text-gray-700">솔루션소개</p>
-              <Link href="/solution/aircon" className="block pl-4 py-1 text-gray-600">
+              <Link href="/solution/airconCleaning" className="block pl-4 py-1 text-gray-600">
                 에어컨전문세척
               </Link>
               <Link href="/solution/disinfection" className="block pl-4 py-1 text-gray-600">
@@ -105,15 +110,20 @@ export default function Header() {
                 에어컨 방역패키지
               </Link>
             </div>
-            <Link href="https://blog.naver.com/beaverscare" className="block py-2 text-gray-700 hover:text-primary" target="_blank" rel="noopener noreferrer">
+            <Link href="https://blog.naver.com/beaverscare/224155958593" className="block py-2 text-gray-700 hover:text-primary" target="_blank" rel="noopener noreferrer">
               포트폴리오
             </Link>
             <Link href="/certificate" className="block py-2 text-gray-700 hover:text-primary">
               증명서발급
             </Link>
-            <button className="w-full mt-4 bg-primary text-white px-6 py-3 rounded-md hover:bg-primary/90 transition">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeg4jP7pmOy9vavfiAsdZZhItECkeC30nsz68p2tSNwq0zD0g/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full mt-4 bg-primary text-white px-6 py-3 rounded-md hover:bg-primary/90 transition text-center"
+            >
               무료진단 문의하기
-            </button>
+            </a>
           </div>
         )}
       </div>

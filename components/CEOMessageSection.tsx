@@ -79,7 +79,7 @@ export default function CEOMessageSection() {
             <p className="text-gray-800 font-bold text-right">
               비버스케어 공동대표 송대복 · 김송이 올림
             </p>
-            <div className="flex justify-end">
+            {/* <div className="flex justify-end">
               <Image
                 src="/introduce/대표사인_누끼.png"
                 alt="대표 사인"
@@ -87,7 +87,7 @@ export default function CEOMessageSection() {
                 height={60}
                 className="object-contain"
               />
-            </div>
+            </div> */}
           </div>
         </motion.div>
       </div>
