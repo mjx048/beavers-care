@@ -13,11 +13,10 @@ export default function WorkHistorySection() {
   const isInView = useInView(ref, { once: true });
 
   const workImages = [
-    '/solution/disinfection/소독방역1.png',
-    '/solution/disinfection/소독방역2.png',
-    '/solution/disinfection/소독방역3.png',
-    '/solution/disinfection/소독방역4.png',
-    '/solution/disinfection/소독방역5.png',
+    '/solution/disinfection/소독방역_1.png',
+    '/solution/disinfection/소독방역_2.png',
+    '/solution/disinfection/소독방역_3.png',
+    '/solution/disinfection/소독방역_4.png',
   ];
 
   return (
