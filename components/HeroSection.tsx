@@ -26,7 +26,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative w-full h-screen mt-20">
+    <section className="relative w-full h-[55vw] md:h-screen mt-14 md:mt-0">
       <Swiper
         modules={[Autoplay, Pagination]}
         spaceBetween={0}
@@ -50,7 +50,7 @@ export default function HeroSection() {
             <div className="relative w-full h-full">
               {/* Background Image */}
               <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                className="absolute inset-0 bg-cover bg-top md:bg-center bg-no-repeat"
                 style={{
                   backgroundImage: `url('${slide.bgImage}')`,
                   filter: 'brightness(0.7)',
@@ -72,7 +72,7 @@ export default function HeroSection() {
                         exit={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1, ease: 'easeOut' }}
                       >
-                        <h2 className="text-white text-4xl md:text-6xl lg:text-7xl font-bold whitespace-pre-line leading-tight">
+                        <h2 className="text-white text-3xl md:text-6xl lg:text-7xl font-bold whitespace-pre-line leading-tight">
                           {slide.text}
                         </h2>
                       </motion.div>
@@ -100,7 +100,12 @@ export default function HeroSection() {
           background: white;
         }
         .swiper-pagination {
-          bottom: 40px !important;
+          bottom: 16px !important;
+        }
+        @media (min-width: 768px) {
+          .swiper-pagination {
+            bottom: 40px !important;
+          }
         }
       `}</style>
     </section>

@@ -25,6 +25,7 @@ export default function IntroducePage() {
   return (
     <main className="min-h-screen">
       <Header />
+      <div className="h-14 md:h-24" />
       <HistorySection />
       <CEOMessageSection />
       <BrandStorySection />
