@@ -24,14 +24,14 @@ export default function HistorySection() {
               내 아이가 머물던 병동의 공기에서<br />시작된 사명감
             </h2>
             <p className="text-gray-600 text-lg">
-              10년 가전 베테랑의 전략적 공기위생 파트너.
+              10년 가전 베테랑의 전략적 공기위생 파트너
             </p>
             <p className="text-primary font-semibold mt-8 mb-2">Pro</p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              대기업 S사, L사, D사, J사<br />
+              국내 가전 대기업 삼○, 엘○, 대○, <br />전○랜드의 가전 전문가들이 모여<br />
             </h2>
             <p className="text-gray-600 mt-4">
-              도합 20년 경력의 가전전문가 임직원 출신.
+              만든 도합 20년 경력의 진짜 가전 전문가 임직원들
             </p>
           </motion.div>
           

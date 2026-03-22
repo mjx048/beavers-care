@@ -16,7 +16,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">문의</h4>
             <p className="text-sm mb-2">TEL : 1899-7026 / 010-4768-7026</p>
             <p className="text-sm mb-2">FAX : 0504-142-7026</p>
-            <p className="text-sm mb-2">E-mail : beaverscare0204@gmail.com</p>
+            <p className="text-sm mb-2">E-mail : beaverscare01@gmail.com</p>
           </div>
         </div>
 
