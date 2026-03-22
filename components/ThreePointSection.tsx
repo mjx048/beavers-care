@@ -48,7 +48,7 @@ export default function ThreePointSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
             >
-              <div className="relative w-full h-[400px]">
+              <div className="relative w-full h-[260px] md:h-[400px]">
                 <Image
                   src={point.image}
                   alt={point.title}
