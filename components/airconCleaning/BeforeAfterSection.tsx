@@ -82,8 +82,8 @@ export default function BeforeAfterSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                   {/* Before */}
                   <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div className="relative w-full h-[400px]">
-                      <div className="absolute top-4 left-4 z-10 bg-red-500 text-white px-4 py-2 rounded-lg font-bold">
+                    <div className="relative w-full h-[200px] md:h-[400px]">
+                      <div className="absolute top-3 left-3 z-10 bg-red-500 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-lg font-bold text-sm md:text-base">
                         세척 전
                       </div>
                       <Image
@@ -98,8 +98,8 @@ export default function BeforeAfterSection() {
 
                   {/* After */}
                   <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div className="relative w-full h-[400px]">
-                      <div className="absolute top-4 left-4 z-10 bg-green-500 text-white px-4 py-2 rounded-lg font-bold">
+                    <div className="relative w-full h-[200px] md:h-[400px]">
+                      <div className="absolute top-3 left-3 z-10 bg-green-500 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-lg font-bold text-sm md:text-base">
                         세척 후
                       </div>
                       <Image

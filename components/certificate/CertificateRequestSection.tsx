@@ -133,7 +133,7 @@ export default function CertificateRequestSection() {
             </div>
 
             {/* Arrow 1 */}
-            <div className="text-primary text-4xl font-bold mb-20">
+            <div className="text-primary text-4xl font-bold md:mb-20 rotate-90 md:rotate-0">
               &gt;
             </div>
 
@@ -147,7 +147,7 @@ export default function CertificateRequestSection() {
             </div>
 
             {/* Arrow 2 */}
-            <div className="text-primary text-4xl font-bold mb-20">
+            <div className="text-primary text-4xl font-bold md:mb-20 rotate-90 md:rotate-0">
               &gt;
             </div>
 
@@ -347,7 +347,7 @@ export default function CertificateRequestSection() {
           >
             <div className="bg-gray-50 p-8 rounded-lg">
               <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">소독 증명서 샘플</h3>
-              <div className="relative w-full h-[800px] rounded-lg overflow-hidden shadow-lg">
+              <div className="relative w-full h-[400px] md:h-[800px] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/certificate/소독증명발급서_예시.png"
                   alt="소독증명발급서"

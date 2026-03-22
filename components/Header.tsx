@@ -10,15 +10,15 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-md z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-14 md:h-24">
           {/* Logo */}
-          <Link href="/" className="flex items-center mr-16">
+          <Link href="/" className="flex items-center mr-4 md:mr-16">
             <Image 
               src="/logo_icon_company.png" 
               alt="Beavers Care" 
               width={220} 
               height={56}
-              className="h-24 w-auto"
+              className="h-10 md:h-20 w-auto"
               priority
             />
           </Link>

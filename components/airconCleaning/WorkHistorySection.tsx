@@ -28,9 +28,9 @@ export default function WorkHistorySection() {
   ];
 
   return (
-    <section ref={ref} className="py-20 bg-white">
+    <section ref={ref} className="pt-16 md:pt-28 pb-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
           {/* Left: Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -38,16 +38,16 @@ export default function WorkHistorySection() {
             transition={{ duration: 0.6 }}
             className="lg:w-1/2 w-full"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2 leading-relaxed">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 leading-relaxed">
               병원전문 비버스케어
             </h2>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2 leading-relaxed">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 leading-relaxed">
               모든 곳을 
             </h2>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2 leading-relaxed">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 leading-relaxed">
               <span style={{ color: 'var(--secondary-color)' }}>[의료기관 인증(KOIHA기준)]</span>
             </h2>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2 leading-relaxed">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 leading-relaxed">
               으로 작업합니다.
             </h2>
           </motion.div>
@@ -59,36 +59,35 @@ export default function WorkHistorySection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:w-1/2 w-full"
           >
-            <div className="space-y-4">
-              <Swiper
-                modules={[Autoplay]}
-                direction="vertical"
-                spaceBetween={20}
-                slidesPerView={3}
-                autoplay={{
-                  delay: 3000,
-                  disableOnInteraction: false,
-                }}
-                loop={true}
-                className="h-[900px]"
-                style={{ height: '900px' }}
-              >
-                {workImages.map((image, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="relative w-full h-[300px] rounded-lg overflow-hidden shadow-lg bg-gray-100">
-                      <Image
-                        src={image}
-                        alt={`작업 사진 ${index + 1}`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        priority={index < 2}
-                      />
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
+            <Swiper
+              modules={[Autoplay]}
+              direction="vertical"
+              breakpoints={{
+                0: { slidesPerView: 1, spaceBetween: 12 },
+                1024: { slidesPerView: 3, spaceBetween: 20 },
+              }}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              className="h-[280px] lg:h-[900px]"
+            >
+              {workImages.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg bg-gray-100">
+                    <Image
+                      src={image}
+                      alt={`작업 사진 ${index + 1}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority={index < 2}
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </motion.div>
         </div>
       </div>
