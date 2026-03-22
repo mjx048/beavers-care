@@ -77,7 +77,7 @@ const jsonLd = {
   description:
     "에어컨 전문세척, 소독 방역, 방역패키지 전문 기업. 대기업 출신 20년 가전 전문가가 직접 진행하는 병원·기업 공기위생 관리 서비스.",
   telephone: "1899-7026",
-  email: "beaverscare0204@gmail.com",
+  email: "beaverscare01@gmail.com",
   address: [
     {
       "@type": "PostalAddress",

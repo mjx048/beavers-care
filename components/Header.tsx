@@ -34,7 +34,7 @@ export default function Header() {
               </button>
               <div className="absolute top-full left-0 mt-2 w-52 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <Link href="/solution/airconCleaning" className="block px-4 py-3 text-base hover:bg-gray-100">
-                  에어컨전문세척
+                  에어컨 전문세척
                 </Link>
                 <Link href="/solution/disinfection" className="block px-4 py-3 text-base hover:bg-gray-100">
                   소독 방역
@@ -54,9 +54,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeg4jP7pmOy9vavfiAsdZZhItECkeC30nsz68p2tSNwq0zD0g/viewform?usp=publish-editor"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/#quote"
             className="hidden md:block bg-primary text-white px-7 py-3 text-lg rounded-md hover:bg-primary/90 transition"
           >
             무료진단 문의하기
@@ -101,7 +99,7 @@ export default function Header() {
             <div className="py-2">
               <p className="font-semibold text-gray-700">솔루션소개</p>
               <Link href="/solution/airconCleaning" className="block pl-4 py-1 text-gray-600">
-                에어컨전문세척
+                에어컨 전문세척
               </Link>
               <Link href="/solution/disinfection" className="block pl-4 py-1 text-gray-600">
                 소독 방역
@@ -117,10 +115,9 @@ export default function Header() {
               증명서발급
             </Link>
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeg4jP7pmOy9vavfiAsdZZhItECkeC30nsz68p2tSNwq0zD0g/viewform?usp=publish-editor"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/#quote"
               className="block w-full mt-4 bg-primary text-white px-6 py-3 rounded-md hover:bg-primary/90 transition text-center"
+              onClick={() => setIsMenuOpen(false)}
             >
               무료진단 문의하기
             </a>

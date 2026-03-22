@@ -15,15 +15,14 @@ export default function CertificateRequestSection() {
 
   const [form, setForm] = useState({
     certificateType: '소독증명서',
-    name: '',
+    businessName: '',
     phone1: '010',
     phone2: '',
     phone3: '',
-    emailId: '',
-    emailDomain: '',
-    customDomain: '',
-    title: '',
-    content: '',
+    location: '',
+    managerTitle: '',
+    managerName: '',
+    disinfectionDate: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -40,9 +39,8 @@ export default function CertificateRequestSection() {
     }
 
     const phone = `${form.phone1}-${form.phone2}-${form.phone3}`;
-    const emailDomain = form.emailDomain === '' ? form.customDomain : form.emailDomain;
 
-    if (!form.name || !form.phone2 || !form.phone3 || !form.emailId || !emailDomain || !form.title || !form.content) {
+    if (!form.businessName || !form.phone2 || !form.phone3 || !form.location || !form.managerTitle || !form.managerName || !form.disinfectionDate) {
       setSubmitResult({ type: 'error', message: '모든 항목을 입력해주세요.' });
       return;
     }
@@ -55,12 +53,12 @@ export default function CertificateRequestSection() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           certificateType: form.certificateType,
-          name: form.name,
+          businessName: form.businessName,
           phone,
-          emailId: form.emailId,
-          emailDomain,
-          title: form.title,
-          content: form.content,
+          location: form.location,
+          managerTitle: form.managerTitle,
+          managerName: form.managerName,
+          disinfectionDate: form.disinfectionDate,
         }),
       });
 
@@ -70,15 +68,14 @@ export default function CertificateRequestSection() {
         setSubmitResult({ type: 'success', message: '신청이 완료되었습니다. 영업일 기준 1~2일 내로 연락드리겠습니다.' });
         setForm({
           certificateType: '소독증명서',
-          name: '',
+          businessName: '',
           phone1: '010',
           phone2: '',
           phone3: '',
-          emailId: '',
-          emailDomain: '',
-          customDomain: '',
-          title: '',
-          content: '',
+          location: '',
+          managerTitle: '',
+          managerName: '',
+          disinfectionDate: '',
         });
         setAgreedToPrivacy(false);
       } else {
@@ -188,16 +185,16 @@ export default function CertificateRequestSection() {
                   </select>
                 </div>
 
-                {/* 이름 */}
+                {/* 상호(명칭) */}
                 <div>
-                  <label className="block text-gray-700 font-semibold mb-2">이름</label>
+                  <label className="block text-gray-700 font-semibold mb-2">상호(명칭)</label>
                   <input
                     type="text"
-                    name="name"
-                    value={form.name}
+                    name="businessName"
+                    value={form.businessName}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    placeholder="이름을 입력하세요"
+                    placeholder="상호 또는 기관명을 입력해주세요."
                   />
                 </div>
 
@@ -235,69 +232,51 @@ export default function CertificateRequestSection() {
                   </div>
                 </div>
 
-                {/* 이메일 */}
+                {/* 소재지 */}
                 <div>
-                  <label className="block text-gray-700 font-semibold mb-2">이메일</label>
-                  {/* 첫 번째 줄: 이메일 아이디 @ 도메인 선택 */}
-                  <div className="flex gap-2 items-center">
-                    <input
-                      type="text"
-                      name="emailId"
-                      value={form.emailId}
-                      onChange={handleChange}
-                      className="flex-1 min-w-0 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="이메일"
-                    />
-                    <span className="shrink-0">@</span>
-                    <select
-                      name="emailDomain"
-                      value={form.emailDomain}
-                      onChange={handleChange}
-                      className="flex-1 min-w-0 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    >
-                      <option value="">직접입력</option>
-                      <option value="naver.com">naver.com</option>
-                      <option value="daum.net">daum.net</option>
-                      <option value="gmail.com">gmail.com</option>
-                      <option value="hanmail.net">hanmail.net</option>
-                    </select>
-                  </div>
-                  {/* 직접입력 선택 시 두 번째 줄에 도메인 입력창 표시 */}
-                  {form.emailDomain === '' && (
-                    <input
-                      type="text"
-                      name="customDomain"
-                      value={form.customDomain}
-                      onChange={handleChange}
-                      className="mt-2 w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="도메인을 직접 입력하세요 (예: naver.com)"
-                    />
-                  )}
-                </div>
-
-                {/* 제목 */}
-                <div>
-                  <label className="block text-gray-700 font-semibold mb-2">제목</label>
+                  <label className="block text-gray-700 font-semibold mb-2">소재지</label>
                   <input
                     type="text"
-                    name="title"
-                    value={form.title}
+                    name="location"
+                    value={form.location}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    placeholder="제목을 입력하세요"
+                    placeholder="소독받은 주소지를 입력해주세요."
                   />
                 </div>
 
-                {/* 내용 */}
+                {/* 관리자 직위 / 성명 */}
                 <div>
-                  <label className="block text-gray-700 font-semibold mb-2">내용</label>
-                  <textarea
-                    name="content"
-                    value={form.content}
+                  <label className="block text-gray-700 font-semibold mb-2">관리자 직위 / 성명</label>
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      name="managerTitle"
+                      value={form.managerTitle}
+                      onChange={handleChange}
+                      className="w-1/2 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      placeholder="직위 (예: 원장)"
+                    />
+                    <input
+                      type="text"
+                      name="managerName"
+                      value={form.managerName}
+                      onChange={handleChange}
+                      className="w-1/2 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      placeholder="성명"
+                    />
+                  </div>
+                </div>
+
+                {/* 소독일자 */}
+                <div>
+                  <label className="block text-gray-700 font-semibold mb-2">소독일자</label>
+                  <input
+                    type="date"
+                    name="disinfectionDate"
+                    value={form.disinfectionDate}
                     onChange={handleChange}
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                    placeholder="내용을 입력하세요"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-700"
                   />
                 </div>
 

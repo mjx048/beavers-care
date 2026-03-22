@@ -9,8 +9,6 @@ import BeliefSection from '@/components/BeliefSection';
 import ThreePointSection from '@/components/ThreePointSection';
 // import PortfolioSection from '@/components/PortfolioSection';
 import CTASection from '@/components/CTASection';
-// import ContactSection from '@/components/ContactSection';
-
 export default function Home() {
   return (
     <main className="min-h-screen">

@@ -4,14 +4,12 @@ import nodemailer from 'nodemailer';
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { certificateType, businessName, phone, location, managerTitle, managerName, disinfectionDate } = body;
+    const { name, phone, address, solutions, models } = body;
 
-    // 필수 항목 검증
-    if (!businessName || !phone || !location || !managerTitle || !managerName || !disinfectionDate) {
+    if (!name || !phone || !address || !solutions || (solutions as string[]).length === 0 || !models || (models as string[]).length === 0) {
       return NextResponse.json({ error: '모든 항목을 입력해주세요.' }, { status: 400 });
     }
 
-    // Gmail SMTP 트랜스포터 생성
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -20,44 +18,35 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    // 이메일 내용 구성
     const mailOptions = {
       from: `"비버스케어 홈페이지" <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_TO,
-      subject: `[증명서 발급 신청] ${businessName} - ${disinfectionDate}`,
+      subject: `[간편 견적 신청] ${name} - ${phone}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #333; border-bottom: 2px solid #5b656e; padding-bottom: 10px;">
-            증명서 발급 신청
+            간편 견적 신청
           </h2>
           <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
             <tr style="background-color: #f5f5f5;">
-              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold; width: 30%;">증명서 종류</td>
-              <td style="padding: 12px; border: 1px solid #ddd;">${certificateType}</td>
+              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold; width: 30%;">성명</td>
+              <td style="padding: 12px; border: 1px solid #ddd;">${name}</td>
             </tr>
             <tr>
-              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">상호(명칭)</td>
-              <td style="padding: 12px; border: 1px solid #ddd;">${businessName}</td>
-            </tr>
-            <tr style="background-color: #f5f5f5;">
               <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">연락처</td>
               <td style="padding: 12px; border: 1px solid #ddd;">${phone}</td>
             </tr>
-            <tr>
-              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">소재지</td>
-              <td style="padding: 12px; border: 1px solid #ddd;">${location}</td>
-            </tr>
             <tr style="background-color: #f5f5f5;">
-              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">관리자 직위</td>
-              <td style="padding: 12px; border: 1px solid #ddd;">${managerTitle}</td>
+              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">주소</td>
+              <td style="padding: 12px; border: 1px solid #ddd;">${address}</td>
             </tr>
             <tr>
-              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">관리자 성명</td>
-              <td style="padding: 12px; border: 1px solid #ddd;">${managerName}</td>
+              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">필요 솔루션</td>
+              <td style="padding: 12px; border: 1px solid #ddd;">${(solutions as string[]).join(', ')}</td>
             </tr>
             <tr style="background-color: #f5f5f5;">
-              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">소독일자</td>
-              <td style="padding: 12px; border: 1px solid #ddd;">${disinfectionDate}</td>
+              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">에어컨 모델</td>
+              <td style="padding: 12px; border: 1px solid #ddd;">${(models as string[]).join(', ')}</td>
             </tr>
           </table>
           <p style="color: #888; font-size: 12px; margin-top: 20px;">
@@ -69,10 +58,9 @@ export async function POST(req: NextRequest) {
 
     await transporter.sendMail(mailOptions);
 
-    return NextResponse.json({ message: '신청이 완료되었습니다.' }, { status: 200 });
+    return NextResponse.json({ message: '견적 신청이 완료되었습니다.' }, { status: 200 });
   } catch (error) {
     console.error('메일 발송 오류:', error);
     return NextResponse.json({ error: '메일 발송에 실패했습니다. 잠시 후 다시 시도해주세요.' }, { status: 500 });
   }
 }
-
