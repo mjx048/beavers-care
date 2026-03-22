@@ -25,13 +25,13 @@ export default function QuickMenu() {
     {
       icon: '/quickMenu/request-quote-logo.png',
       label: '견적문의',
-      href: 'https://docs.google.com/forms/d/e/1FAIpQLSeg4jP7pmOy9vavfiAsdZZhItECkeC30nsz68p2tSNwq0zD0g/viewform?usp=publish-editor',
+      href: '/#quote',
       bgColor: '#FFFFFF',
     },
     {
       icon: '/quickMenu/kakao_logo.png',
       label: '카톡상담',
-      href: 'https://pf.kakao.com/_PrKhX', 
+      href: 'https://pf.kakao.com/_PrKhX/chat', 
     },
     {
       icon: '/quickMenu/call_logo.png',
