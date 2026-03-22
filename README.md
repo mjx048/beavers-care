@@ -1,6 +1,6 @@
-# Beavers Care 홈페이지
+# Beavers Care
 
-Next.js 최신 버전으로 구현한 Beavers Care 홈페이지입니다.
+Beavers Care 프로젝트
 
 ## 기술 스택
 
@@ -16,23 +16,40 @@ Next.js 최신 버전으로 구현한 Beavers Care 홈페이지입니다.
 - ✅ 반응형 디자인 (모바일/태블릿/데스크톱)
 - ✅ 고정 헤더 네비게이션 (드롭다운 메뉴 포함)
 - ✅ 스크롤 애니메이션 효과
-- ✅ 포트폴리오 필터링 기능
-- ✅ 슬라이드 컴포넌트 (모바일)
-- ✅ 부드러운 페이지 전환 효과
+- ✅ 슬라이드 컴포넌트 (Swiper)
+- ✅ 간편 견적 폼 → Gmail API 발송
+- ✅ 소독 증명서 발급 신청 폼 → Gmail API 발송
+- ✅ 우측 고정 퀵메뉴 (견적·카톡·전화·블로그·상단이동)
 
-## 구현된 섹션
+## 구현된 페이지 및 섹션
 
-1. **Header** - 고정 네비게이션 바 (드롭다운 메뉴)
-2. **Hero Section** - 메인 비주얼 섹션
-3. **Corporation Section** - 회사 소개
-4. **Members Section** - 멤버십 정보
-5. **Client Section** - 고객 실적
-6. **Solution Section** - 솔루션 소개 (4가지)
-7. **Difference Section** - 차별점 (슬라이드)
-8. **Portfolio Section** - 포트폴리오 (필터링 기능)
-9. **CTA Section** - 행동 유도 섹션
-10. **Contact Section** - 문의 섹션
-11. **Footer** - 하단 정보
+### 메인 페이지 (`/`)
+1. **Header** - 고정 네비게이션 바 (드롭다운, 모바일 햄버거 메뉴)
+2. **HeroSection** - 메인 배너 슬라이드
+3. **HistorySection** - 회사 연혁 및 전문가 소개
+4. **ClientSection** - 고객사 로고
+5. **SolutionSection** - 솔루션 소개 카드
+6. **BeliefSection** - 고객 신뢰·리뷰 슬라이드
+7. **ThreePointSection** - 비버스케어 선택 이유 3가지
+8. **CTASection** - 간편 견적 신청 폼 (Gmail 발송)
+9. **Footer** - 회사 정보
+
+### 소개 페이지 (`/introduce`)
+- **HistorySection** - 연혁
+- **CEOMessageSection** - 대표 인삿말
+- **BrandStorySection** - 브랜드 스토리
+- **CertificatesSection** - 인증서 슬라이드
+
+### 솔루션 페이지
+- `/solution/airconCleaning` — 에어컨 전문세척
+  - WorkHistorySection · BeforeAfterSection · ProcessSection · ThreePointSection
+- `/solution/disinfection` — 소독 방역
+  - WorkHistorySection · ProcessSection · ThreePointSection
+- `/solution/quarantinePackage` — 에어컨 방역패키지
+  - PackageSection
+
+### 증명서 발급 페이지 (`/certificate`)
+- **CertificateRequestSection** - 소독 증명서 발급 신청 폼 (Gmail 발송)
 
 ## 시작하기
 
@@ -48,7 +65,7 @@ npm install
 npm run dev
 ```
 
-브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 확인하세요.
+브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 확인
 
 ### 빌드
 
@@ -60,25 +77,62 @@ npm start
 ## 프로젝트 구조
 
 ```
-beaverscare/
+beavers-care/
 ├── app/
+│   ├── api/
+│   │   ├── certificate-request/
+│   │   │   └── route.ts          # 증명서 발급 신청 메일 발송
+│   │   └── quote-request/
+│   │       └── route.ts          # 간편 견적 신청 메일 발송
+│   ├── certificate/
+│   │   └── page.tsx              # 증명서 발급 페이지
+│   ├── introduce/
+│   │   └── page.tsx              # 회사 소개 페이지
+│   ├── solution/
+│   │   ├── airconCleaning/
+│   │   │   └── page.tsx          # 에어컨 전문세척 페이지
+│   │   ├── disinfection/
+│   │   │   └── page.tsx          # 소독 방역 페이지
+│   │   └── quarantinePackage/
+│   │       └── page.tsx          # 에어컨 방역패키지 페이지
 │   ├── globals.css
 │   ├── layout.tsx
-│   └── page.tsx
+│   └── page.tsx                  # 메인 페이지
 ├── components/
-│   ├── Header.tsx
-│   ├── Footer.tsx
-│   ├── HeroSection.tsx
-│   ├── HistoryßSection.tsx
-│   ├── MembersSection.tsx
+│   ├── airconCleaning/
+│   │   ├── BeforeAfterSection.tsx
+│   │   ├── ProcessSection.tsx
+│   │   └── WorkHistorySection.tsx
+│   ├── certificate/
+│   │   └── CertificateRequestSection.tsx
+│   ├── disinfection/
+│   │   ├── ProcessSection.tsx
+│   │   └── WorkHistorySection.tsx
+│   ├── quarantinePackage/
+│   │   └── PackageSection.tsx
+│   ├── BeliefSection.tsx
+│   ├── BrandStorySection.tsx
+│   ├── CEOMessageSection.tsx
+│   ├── CertificatesSection.tsx
 │   ├── ClientSection.tsx
-│   ├── SolutionSection.tsx
-│   ├── DifferenceSection.tsx
-│   ├── PortfolioSection.tsx
 │   ├── CTASection.tsx
-│   └── ContactSection.tsx
+│   ├── Footer.tsx
+│   ├── Header.tsx
+│   ├── HeroSection.tsx
+│   ├── HistorySection.tsx
+│   ├── QuickMenu.tsx
+│   ├── SolutionSection.tsx
+│   └── ThreePointSection.tsx
 ├── public/
-│   └── no_image.jpg
+│   ├── 3point/
+│   ├── belief/
+│   ├── certificate/
+│   ├── client/
+│   ├── document/
+│   ├── introduce/
+│   ├── mainBanner/
+│   ├── quickMenu/
+│   └── solution/
 ├── package.json
 ├── tsconfig.json
 ├── tailwind.config.ts
