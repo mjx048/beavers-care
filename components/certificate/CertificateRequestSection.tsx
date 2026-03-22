@@ -108,7 +108,7 @@ export default function CertificateRequestSection() {
             전화상담 : 1899-7026
           </p>
           <p className="text-gray-600 text-lg">
-            문의메일 : beaverscare0204@gmail.com
+            문의메일 : beaverscare01@gmail.com
           </p>
         </motion.div>
 

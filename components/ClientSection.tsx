@@ -18,6 +18,12 @@ export default function ClientSection() {
     { src: '/client/logo/썬벨팬션.png', alt: '썬벨 펜션' },
     { src: '/client/logo/웰손병원.png', alt: '웰손 병원' },
     { src: '/client/logo/크린토피아.png', alt: '크린토피아' },
+    { src: '/client/logo/립멘.png', alt: '립멘' },
+    { src: '/client/logo/everden_hotel.png', alt: 'everden_hotel' },
+    { src: '/client/logo/more_mellow.png', alt: 'more_mellow' },
+    { src: '/client/logo/바오밥수학.png', alt: '바오밥수학' },
+    { src: '/client/logo/인비온영어학원.png', alt: '인비온영어학원' },
+    { src: '/client/logo/프라임건설주식회사.png', alt: '프라임건설주식회사' },
   ];
 
   return (
