@@ -31,7 +31,7 @@ export default function QuickMenu() {
     {
       icon: '/quickMenu/kakao_logo.png',
       label: '카톡상담',
-      href: 'https://pf.kakao.com/_PrKhX', 
+      href: 'https://pf.kakao.com/_PrKhX/chat', 
     },
     {
       icon: '/quickMenu/call_logo.png',
