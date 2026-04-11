@@ -33,11 +33,12 @@ export default function CTASection() {
     address: '',
     solutions: [] as string[],
     models: [] as string[],
+    notes: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitResult, setSubmitResult] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -82,6 +83,7 @@ export default function CTASection() {
           address: form.address,
           solutions: form.solutions,
           models: form.models,
+          notes: form.notes.trim() || undefined,
         }),
       });
 
@@ -89,7 +91,7 @@ export default function CTASection() {
 
       if (res.ok) {
         setSubmitResult({ type: 'success', message: '견적 신청이 완료되었습니다! 빠른 시일 내에 연락드리겠습니다.' });
-        setForm({ name: '', phone1: '010', phone2: '', phone3: '', address: '', solutions: [], models: [] });
+        setForm({ name: '', phone1: '010', phone2: '', phone3: '', address: '', solutions: [], models: [], notes: '' });
       } else {
         setSubmitResult({ type: 'error', message: data.error || '오류가 발생했습니다.' });
       }
@@ -248,6 +250,22 @@ export default function CTASection() {
                     );
                   })}
                 </div>
+              </div>
+
+              {/* 추가 문의사항 */}
+              <div>
+                <label className="block text-gray-700 font-semibold mb-1">추가 문의사항</label>
+                <p className="text-sm text-gray-500 mb-2">희망 일정, 대수, 요청 사항 등 자유롭게 적어주세요. (선택)</p>
+                <textarea
+                  name="notes"
+                  value={form.notes}
+                  onChange={handleChange}
+                  rows={5}
+                  maxLength={2000}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-800 resize-y min-h-[120px] placeholder:text-gray-400"
+                  placeholder="예) 미팅은 주말 오전이 좋아요. 벽걸이 2대 세척 희망합니다."
+                />
+                <p className="text-xs text-gray-400 mt-1 text-right">{form.notes.length} / 2000</p>
               </div>
 
               {/* 사진 안내 */}

@@ -1,14 +1,32 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+function escapeHtml(text: string) {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, phone, address, solutions, models } = body;
+    const { name, phone, address, solutions, models, notes } = body;
 
     if (!name || !phone || !address || !solutions || (solutions as string[]).length === 0 || !models || (models as string[]).length === 0) {
       return NextResponse.json({ error: '모든 항목을 입력해주세요.' }, { status: 400 });
     }
+
+    const notesText =
+      typeof notes === 'string' && notes.trim().length > 0 ? notes.trim().slice(0, 2000) : '';
+    const notesRow =
+      notesText.length > 0
+        ? `<tr>
+              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold; vertical-align: top;">추가 문의사항</td>
+              <td style="padding: 12px; border: 1px solid #ddd; white-space: pre-wrap;">${escapeHtml(notesText)}</td>
+            </tr>`
+        : '';
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -48,6 +66,7 @@ export async function POST(req: NextRequest) {
               <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">에어컨 모델</td>
               <td style="padding: 12px; border: 1px solid #ddd;">${(models as string[]).join(', ')}</td>
             </tr>
+            ${notesRow}
           </table>
           <p style="color: #888; font-size: 12px; margin-top: 20px;">
             본 메일은 비버스케어 홈페이지를 통해 자동 발송되었습니다.
