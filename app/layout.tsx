@@ -41,6 +41,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: BASE_URL,
   },
+  // 네이버는 검색용 파비콘 우선순위에서 shortcut icon·절대 URL href를 권장 (searchadvisor.naver.com/guide/markup-favicon)
+  icons: {
+    shortcut: "/icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "ko_KR",
