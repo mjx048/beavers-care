@@ -9,14 +9,21 @@ import CertificatesSection from '@/components/CertificatesSection';
 export const metadata: Metadata = {
   title: "회사 소개",
   description:
-    "비버스케어 회사 소개. 국내 가전 대기업 전문가들이 모여 만든 공기위생 전문 기업입니다.",
+    "시흥·인천 비버스케어 회사 소개. 국내 가전 대기업 전문가들이 모여 만든 공기위생 전문 기업입니다.",
+  keywords: [
+    "비버스케어",
+    "시흥 에어컨 청소",
+    "인천 에어컨 청소",
+    "공기위생",
+    "회사 소개",
+  ],
   alternates: {
     canonical: "https://beaverscare.co.kr/introduce",
   },
   openGraph: {
     title: "회사 소개 | 비버스케어",
     description:
-      "대기업 출신 20년 가전 전문가가 운영하는 공기위생 전문 기업 비버스케어를 소개합니다.",
+      "시흥·인천 기반, 대기업 출신 20년 가전 전문가가 운영하는 공기위생 전문 기업 비버스케어를 소개합니다.",
     url: "https://beaverscare.co.kr/introduce",
   },
 };
@@ -26,6 +33,9 @@ export default function IntroducePage() {
     <main className="min-h-screen">
       <Header />
       <div className="h-14 md:h-24" />
+      <h1 className="sr-only">
+        비버스케어 회사 소개 — 시흥·인천 공기위생 전문 기업
+      </h1>
       <HistorySection />
       <CEOMessageSection />
       <BrandStorySection />

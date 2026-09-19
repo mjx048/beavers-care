@@ -6,7 +6,14 @@ import CertificateRequestSection from '@/components/certificate/CertificateReque
 export const metadata: Metadata = {
   title: "증명서 발급",
   description:
-    "비버스케어 방역·소독 증명서 발급 서비스. 방역 완료 후 공식 증명서를 발급해 드립니다.",
+    "시흥·인천 비버스케어 방역·소독 증명서 발급. 방역 완료 후 공식 증명서를 발급해 드립니다.",
+  keywords: [
+    "소독증명서",
+    "방역증명서",
+    "소독 증명서 발급",
+    "시흥 방역",
+    "인천 방역",
+  ],
   alternates: {
     canonical: "https://beaverscare.co.kr/certificate",
   },
