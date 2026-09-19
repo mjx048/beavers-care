@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// 허용할 검색엔진 / SNS 봇 목록
+// 허용할 검색엔진 / SNS / AI 봇 목록
+// AI 봇은 해외 IP에서 접근하므로 geo 차단 예외가 필요함
 const ALLOWED_BOTS =
-  /Googlebot|Yeti|bingbot|Twitterbot|facebookexternalhit|Slackbot|Kakaotalk|AhrefsBot|Semrushbot/i;
+  /Googlebot|GoogleOther|Google-Extended|Yeti|bingbot|Twitterbot|facebookexternalhit|Slackbot|Kakaotalk|AhrefsBot|Semrushbot|GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Applebot|Bytespider|CCBot|meta-externalagent/i;
 
 /**
  * 배포 플랫폼별 국가 코드 헤더를 순서대로 확인

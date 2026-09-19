@@ -41,6 +41,10 @@ export default function BeliefSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             고객 신뢰와 만족
           </h2>
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            시흥·인천·경기 병원·기업·학교 현장에서 쌓아온 실제 고객 후기와 사례입니다.
+            에어컨 세척·소독 방역 후 쾌적한 공기와 위생에 대한 만족을 텍스트와 리뷰로 확인할 수 있습니다.
+          </p>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -54,7 +58,7 @@ export default function BeliefSection() {
             <div className="relative w-full h-[38vh]">
               <Image
                 src="/belief/popup/costco popup.png"
-                alt="고객 사례"
+                alt="비버스케어 고객 사례 — 대형 유통·기업 현장 공기위생 케어"
                 fill
                 className="object-cover drop-shadow-2xl"
               />
@@ -84,7 +88,7 @@ export default function BeliefSection() {
                   <div className="relative w-full h-[38vh] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-white">
                     <Image
                       src={image}
-                      alt={`리뷰 ${index + 1}`}
+                      alt={`비버스케어 고객 리뷰 ${index + 1} — 에어컨 세척·방역 후기`}
                       fill
                       className="object-contain"
                     />

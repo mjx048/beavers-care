@@ -27,6 +27,9 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full h-[55vw] md:h-screen mt-14 md:mt-0">
+      <h1 className="sr-only">
+        비버스케어 — 시흥·인천 병원·기업·학교 공기위생 전문, 에어컨 세척과 소독 방역
+      </h1>
       <Swiper
         modules={[Autoplay, Pagination]}
         spaceBetween={0}
@@ -72,9 +75,9 @@ export default function HeroSection() {
                         exit={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1, ease: 'easeOut' }}
                       >
-                        <h2 className="text-white text-3xl md:text-6xl lg:text-7xl font-bold whitespace-pre-line leading-tight">
+                        <p className="text-white text-3xl md:text-6xl lg:text-7xl font-bold whitespace-pre-line leading-tight">
                           {slide.text}
-                        </h2>
+                        </p>
                       </motion.div>
                     )}
                   </AnimatePresence>

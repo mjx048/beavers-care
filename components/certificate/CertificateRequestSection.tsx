@@ -98,9 +98,12 @@ export default function CertificateRequestSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             beavers care 증명서 발급
-          </h2>
+          </h1>
+          <p className="text-gray-600 text-lg mb-2">
+            시흥·인천 비버스케어 방역·소독 완료 후 공식 증명서를 발급합니다.
+          </p>
           <p className="text-gray-600 text-lg mb-2">
             전화상담 : 1899-7026
           </p>

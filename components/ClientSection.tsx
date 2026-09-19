@@ -19,8 +19,8 @@ export default function ClientSection() {
     { src: '/client/logo/웰손병원.png', alt: '웰손 병원' },
     { src: '/client/logo/크린토피아.png', alt: '크린토피아' },
     { src: '/client/logo/립멘.png', alt: '립멘' },
-    { src: '/client/logo/everden_hotel.png', alt: 'everden_hotel' },
-    { src: '/client/logo/more_mellow.png', alt: 'more_mellow' },
+    { src: '/client/logo/everden_hotel.png', alt: '에버덴 호텔' },
+    { src: '/client/logo/more_mellow.png', alt: '모어멜로우' },
     { src: '/client/logo/바오밥수학.png', alt: '바오밥수학' },
     { src: '/client/logo/인비온영어학원.png', alt: '인비온영어학원' },
     { src: '/client/logo/프라임건설주식회사.png', alt: '프라임건설주식회사' },
@@ -36,9 +36,13 @@ export default function ClientSection() {
           className="text-center mb-12"
         >
           <p className="text-primary font-semibold mb-2">Client</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             단, 3년만에 1,000건 이상 프로젝트 성공경험
           </h2>
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            시흥·인천·경기 병원, 학원, 기업, 상업시설 등 다양한 현장에서
+            에어컨 세척과 소독 방역 프로젝트를 수행했습니다.
+          </p>
         </motion.div>
 
         <motion.div

@@ -7,11 +7,11 @@ const BASE_URL = "https://beaverscare.co.kr";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "비버스케어 | 병원·기업 공기위생 전문 파트너",
+    default: "비버스케어 | 시흥·인천 병원·기업 공기위생 전문",
     template: "%s | 비버스케어",
   },
   description:
-    "에어컨 전문세척, 소독 방역, 방역패키지 전문 기업 비버스케어. 대기업 출신 20년 가전 전문가가 직접하는 병원·기업 공기위생 관리 서비스",
+    "시흥·인천 기반 에어컨 전문세척, 소독 방역, 방역패키지 전문 기업 비버스케어. 대기업 출신 20년 가전 전문가가 직접하는 병원·기업·학교 공기위생 관리 서비스",
   keywords: [
     "에어컨 청소",
     "에어컨 세척",
@@ -24,8 +24,12 @@ export const metadata: Metadata = {
     "비버스케어",
     "beavers care",
     "에어컨 방역패키지",
+    "시흥 에어컨 청소",
+    "시흥 방역",
     "인천 에어컨 청소",
+    "인천 방역",
     "경기 에어컨 청소",
+    "송도 에어컨 청소",
   ],
   authors: [{ name: "비버스케어", url: BASE_URL }],
   creator: "비버스케어",
@@ -50,9 +54,9 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     url: BASE_URL,
     siteName: "비버스케어",
-    title: "비버스케어 | 병원·기업 공기위생 전문 파트너",
+    title: "비버스케어 | 시흥·인천 병원·기업 공기위생 전문",
     description:
-      "에어컨 전문세척, 소독 방역, 방역패키지 전문 기업 비버스케어. 대기업 출신 20년 가전 전문가가 직접하는 병원·기업 공기위생 관리 서비스",
+      "시흥·인천 기반 에어컨 전문세척, 소독 방역, 방역패키지 전문 기업 비버스케어. 대기업 출신 20년 가전 전문가가 직접하는 병원·기업 공기위생 관리 서비스",
     images: [
       {
         url: "/logo_icon_company.png",
@@ -72,33 +76,58 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "비버스케어",
-  alternateName: "Beavers Care",
-  url: BASE_URL,
-  logo: `${BASE_URL}/logo_icon_company.png`,
-  image: `${BASE_URL}/logo_icon_company.png`,
-  description:
-    "에어컨 전문세척, 소독 방역, 방역패키지 전문 기업. 대기업 출신 20년 가전 전문가가 직접 진행하는 병원·기업 공기위생 관리 서비스.",
-  telephone: "1899-7026",
-  email: "beaverscare01@gmail.com",
-  address: [
+  "@graph": [
     {
-      "@type": "PostalAddress",
-      streetAddress: "시청로 25 시티프론트561, 429호",
-      addressLocality: "시흥시",
-      addressRegion: "경기도",
-      addressCountry: "KR",
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
+      name: "비버스케어",
+      alternateName: "Beavers Care",
+      url: BASE_URL,
+      logo: `${BASE_URL}/logo_icon_company.png`,
+      image: `${BASE_URL}/logo_icon_company.png`,
+      description:
+        "시흥·인천 기반 에어컨 전문세척, 소독 방역, 방역패키지 전문 기업. 대기업 출신 20년 가전 전문가가 직접 진행하는 병원·기업 공기위생 관리 서비스.",
+      telephone: "1899-7026",
+      email: "beaverscare01@gmail.com",
+      sameAs: ["http://xn--hk3b15abygvxd8yp.com/"],
     },
     {
-      "@type": "PostalAddress",
-      streetAddress: "컨벤시아대로 80, 401동 1층",
-      addressLocality: "연수구",
-      addressRegion: "인천",
-      addressCountry: "KR",
+      "@type": "LocalBusiness",
+      "@id": `${BASE_URL}/#localbusiness`,
+      name: "비버스케어",
+      alternateName: "Beavers Care",
+      url: BASE_URL,
+      logo: `${BASE_URL}/logo_icon_company.png`,
+      image: `${BASE_URL}/logo_icon_company.png`,
+      description:
+        "시흥·인천 에어컨 전문세척, 소독 방역, 방역패키지 전문 기업. 대기업 출신 20년 가전 전문가가 직접 진행하는 병원·기업 공기위생 관리 서비스.",
+      telephone: "1899-7026",
+      email: "beaverscare01@gmail.com",
+      parentOrganization: { "@id": `${BASE_URL}/#organization` },
+      areaServed: [
+        { "@type": "City", name: "시흥시" },
+        { "@type": "City", name: "인천" },
+        { "@type": "AdministrativeArea", name: "경기도" },
+      ],
+      address: [
+        {
+          "@type": "PostalAddress",
+          streetAddress: "시청로 25 시티프론트561, 429호",
+          addressLocality: "시흥시",
+          addressRegion: "경기도",
+          addressCountry: "KR",
+        },
+        {
+          "@type": "PostalAddress",
+          streetAddress: "컨벤시아대로 80, 401동 1층",
+          addressLocality: "연수구",
+          addressRegion: "인천",
+          addressCountry: "KR",
+        },
+      ],
+      sameAs: ["http://xn--hk3b15abygvxd8yp.com/"],
     },
   ],
-  sameAs: ["http://xn--hk3b15abygvxd8yp.com/"],
 };
 
 export default function RootLayout({
@@ -119,4 +148,3 @@ export default function RootLayout({
     </html>
   );
 }
-
