@@ -18,7 +18,7 @@ export default function PackageSection() {
           transition={{ duration: 0.6 }}
           className="w-full"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 leading-relaxed text-center">
+          <h2 className="text-[clamp(1.35rem,5.5vw,2.25rem)] font-bold leading-snug text-balance break-keep text-gray-800 mb-8 text-center">
             1+1 패키지 소개
           </h2>
           <div className="relative w-full h-[70vh] md:h-[85vh] rounded-lg overflow-hidden shadow-lg">

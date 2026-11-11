@@ -29,33 +29,33 @@ export default function BeliefSection() {
   ];
 
   return (
-    <section ref={ref} className="py-16 bg-gray-50">
-      <div className="mx-auto px-6 max-w-screen-2xl">
+    <section ref={ref} className="py-12 md:py-16 bg-gray-50 overflow-x-clip">
+      <div className="container mx-auto px-4 max-w-screen-2xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16 min-w-0"
         >
           <p className="text-primary font-semibold mb-2">Belief</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-[clamp(1.35rem,5.5vw,2.25rem)] font-bold text-gray-800 mb-4 leading-snug text-balance break-keep">
             고객 신뢰와 만족
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-600 text-[15px] md:text-lg max-w-3xl mx-auto break-keep">
             시흥·인천·경기 병원·기업·학교 현장에서 쌓아온 실제 고객 후기와 사례입니다.
             에어컨 세척·소독 방역 후 쾌적한 공기와 위생에 대한 만족을 텍스트와 리뷰로 확인할 수 있습니다.
           </p>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
           {/* Left: Popup Image (1/2) */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="lg:w-1/2 w-full"
+            className="lg:w-1/2 w-full min-w-0"
           >
-            <div className="relative w-full h-[38vh]">
+            <div className="relative w-full h-[28vh] sm:h-[38vh] rounded-lg overflow-hidden">
               <Image
                 src="/belief/popup/costco popup.png"
                 alt="비버스케어 고객 사례 — 대형 유통·기업 현장 공기위생 케어"
@@ -70,12 +70,16 @@ export default function BeliefSection() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:w-1/2 w-full"
+            className="lg:w-1/2 w-full min-w-0 overflow-hidden"
           >
             <Swiper
               modules={[Autoplay]}
               spaceBetween={12}
-              slidesPerView={2}
+              slidesPerView={1.35}
+              breakpoints={{
+                480: { slidesPerView: 1.6 },
+                768: { slidesPerView: 2 },
+              }}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
@@ -85,7 +89,7 @@ export default function BeliefSection() {
             >
               {reviewImages.map((image, index) => (
                 <SwiperSlide key={index}>
-                  <div className="relative w-full h-[38vh] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-white">
+                  <div className="relative w-full h-[28vh] sm:h-[38vh] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-white">
                     <Image
                       src={image}
                       alt={`비버스케어 고객 리뷰 ${index + 1} — 에어컨 세척·방역 후기`}

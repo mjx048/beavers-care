@@ -33,13 +33,13 @@ export default function CEOMessageSection() {
         >
           <div className="text-center mb-12">
             <p className="text-primary font-semibold mb-2">CEO Message</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-[clamp(1.35rem,5.5vw,2.25rem)] font-bold text-gray-800 mb-4 leading-snug break-keep">
               대표 인삿말
             </h2>
           </div>
 
-          <div className="p-5 md:p-8 lg:p-12">
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-8 md:mb-16 text-center leading-relaxed">
+          <div className="p-4 sm:p-5 md:p-8 lg:p-12 min-w-0">
+            <h3 className="text-[clamp(1.15rem,4.5vw,1.875rem)] font-bold text-gray-800 mb-8 md:mb-16 text-center leading-snug text-balance break-keep">
               아이의 숨결을 지키는 마음으로,<br />
               가전 위생의 기준을 세웁니다.
             </h3>

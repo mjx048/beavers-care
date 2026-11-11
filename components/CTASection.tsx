@@ -103,25 +103,25 @@ export default function CTASection() {
   };
 
   return (
-    <section id="quote" ref={ref} className="py-20 bg-gradient-to-r from-primary to-primary/80 text-white">
+    <section id="quote" ref={ref} className="py-12 md:py-20 bg-gradient-to-r from-primary to-primary/80 text-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-2xl mx-auto"
+          className="max-w-2xl mx-auto min-w-0"
         >
           {/* 헤더 */}
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">간편 견적</h2>
-            <p className="text-lg md:text-xl text-white/90">
+          <div className="text-center mb-8 md:mb-10">
+            <h2 className="text-[clamp(1.5rem,5.5vw,2.25rem)] font-bold mb-4 break-keep">간편 견적</h2>
+            <p className="text-[15px] md:text-xl text-white/90 break-keep">
               간편 견적 문의를 남겨주시면<br />
               빠른 시일 내에 연락드리겠습니다.
             </p>
           </div>
 
           {/* 폼 카드 */}
-          <div className="bg-white rounded-2xl p-6 md:p-10 shadow-2xl">
+          <div className="bg-white rounded-2xl p-4 sm:p-6 md:p-10 shadow-2xl">
             <form className="space-y-5" onSubmit={handleSubmit}>
 
               {/* 성명 */}
@@ -140,14 +140,15 @@ export default function CTASection() {
               {/* 연락처 */}
               <div>
                 <label className="block text-gray-700 font-semibold mb-2">연락처</label>
-                <div className="flex gap-2">
+                <div className="flex gap-1.5 sm:gap-2">
                   <input
                     type="text"
                     name="phone1"
                     value={form.phone1}
                     onChange={handleChange}
                     maxLength={3}
-                    className="w-1/3 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-800"
+                    inputMode="numeric"
+                    className="w-1/3 min-w-0 px-2 sm:px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-800 text-sm sm:text-base"
                     placeholder="010"
                   />
                   <input
@@ -156,7 +157,8 @@ export default function CTASection() {
                     value={form.phone2}
                     onChange={handleChange}
                     maxLength={4}
-                    className="w-1/3 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-800"
+                    inputMode="numeric"
+                    className="w-1/3 min-w-0 px-2 sm:px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-800 text-sm sm:text-base"
                     placeholder="0000"
                   />
                   <input
@@ -165,7 +167,8 @@ export default function CTASection() {
                     value={form.phone3}
                     onChange={handleChange}
                     maxLength={4}
-                    className="w-1/3 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-800"
+                    inputMode="numeric"
+                    className="w-1/3 min-w-0 px-2 sm:px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-800 text-sm sm:text-base"
                     placeholder="0000"
                   />
                 </div>
@@ -269,11 +272,11 @@ export default function CTASection() {
               </div>
 
               {/* 사진 안내 */}
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                <p className="text-amber-800 text-sm leading-relaxed">
-                  📷 에어컨 주변부 작업환경을 확인할 수 있는 사진은<br />
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 sm:p-4">
+                <p className="text-amber-800 text-[13px] sm:text-sm leading-relaxed break-keep">
+                  📷 에어컨 주변부 작업환경을 확인할 수 있는 사진은{' '}
                   <span className="font-semibold">[카톡 오픈채팅]</span> 혹은{' '}
-                  <span className="font-semibold">010-4768-7026</span> 문자로 보내주세요!
+                  <span className="font-semibold whitespace-nowrap">010-4768-7026</span> 문자로 보내주세요!
                 </p>
               </div>
 

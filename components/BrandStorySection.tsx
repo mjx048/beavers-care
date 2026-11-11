@@ -19,7 +19,7 @@ export default function BrandStorySection() {
           className="text-center mb-12"
         >
           <p className="text-primary font-semibold mb-2">Brand Story</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-[clamp(1.35rem,5.5vw,2.25rem)] font-bold text-gray-800 mb-4 leading-snug text-balance break-keep">
             비버스케어 브랜드 스토리
           </h2>
         </motion.div>

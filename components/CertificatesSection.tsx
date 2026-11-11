@@ -34,7 +34,7 @@ export default function CertificatesSection() {
           className="text-center mb-12"
         >
           <p className="text-primary font-semibold mb-2">Certificates</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+          <h2 className="text-[clamp(1.35rem,5.5vw,2.25rem)] font-bold leading-snug text-balance break-keep text-gray-800 mb-3">
             검증된 기업, 안심할 수 있는 파트너
           </h2>
           <p className="text-gray-500 text-lg">

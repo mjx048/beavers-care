@@ -2,21 +2,21 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
+    <footer className="bg-gray-900 text-gray-300 py-10 md:py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-          <div>
-            <h3 className="text-white text-xl font-bold mb-4">Beavers Care</h3>
-            <p className="text-sm mb-2">본사 : 경기도 시흥시 시청로 25 시티프론트561, 429호</p>
-            <p className="text-sm mb-2">인천점 : 인천 연수구 컨벤시아대로 80, 401동 1층</p>
+          <div className="min-w-0">
+            <h3 className="text-white text-lg md:text-xl font-bold mb-4">Beavers Care</h3>
+            <p className="text-sm mb-2 break-keep">시흥점 : 경기도 시흥시 시청로 25 시티프론트561, 429호</p>
+            <p className="text-sm mb-2 break-keep">인천점 : 인천 연수구 컨벤시아대로 80, 401동 1층</p>
             <p className="text-sm mb-2">대표 : 송대복 김송이</p>
-            <p className="text-sm mb-2">사업자등록번호 : 613-23-67112</p>
+            <p className="text-sm mb-2 break-keep">사업자등록번호 : 613-23-67112</p>
           </div>
-          <div>
+          <div className="min-w-0">
             <h4 className="text-white font-semibold mb-4">문의</h4>
-            <p className="text-sm mb-2">TEL : 1899-7026 / 010-4768-7026</p>
+            <p className="text-sm mb-2 break-keep">TEL : 1899-7026 / 010-4768-7026</p>
             <p className="text-sm mb-2">FAX : 0504-142-7026</p>
-            <p className="text-sm mb-2">E-mail : beaverscare01@gmail.com</p>
+            <p className="text-sm mb-2 break-all">E-mail : beaverscare01@gmail.com</p>
           </div>
         </div>
 

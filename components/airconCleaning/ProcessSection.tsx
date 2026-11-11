@@ -18,7 +18,7 @@ export default function ProcessSection() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-1">
+          <h2 className="text-[clamp(1.35rem,5.5vw,2.25rem)] font-bold leading-snug text-balance break-keep text-gray-800 mb-1">
             에어컨 세척 프로세스
           </h2>
           <p className="text-gray-600 text-lg mb-0">
