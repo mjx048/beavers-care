@@ -10,27 +10,27 @@ export default function HistorySection() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section ref={ref} className="py-20 bg-white">
+    <section ref={ref} className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-left"
+            className="text-left min-w-0"
           >
             <p className="text-primary font-semibold mb-2">History</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              내 아이가 머물던 병동의 공기에서<br />시작된 사명감
+            <h2 className="text-[clamp(1.35rem,5.5vw,2.25rem)] font-bold text-gray-800 mb-4 leading-snug text-balance break-keep">
+              내 아이가 머물던 병동의 공기에서 시작된 사명감
             </h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-[15px] md:text-lg break-keep">
               10년 가전 베테랑의 전략적 공기위생 파트너
             </p>
             <p className="text-primary font-semibold mt-8 mb-2">Pro</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              국내 가전 대기업 삼○, 엘○, 대○, <br />전○랜드의 가전 전문가들이 모여<br />
+            <h2 className="text-[clamp(1.35rem,5.5vw,2.25rem)] font-bold text-gray-800 mb-4 leading-snug text-balance break-keep">
+              국내 가전 대기업 삼○, 엘○, 대○, 전○랜드의 가전 전문가들이 모여
             </h2>
-            <p className="text-gray-600 mt-4">
+            <p className="text-gray-600 mt-4 text-[15px] md:text-base break-keep">
               만든 도합 20년 경력의 진짜 가전 전문가 임직원들
             </p>
           </motion.div>
@@ -39,7 +39,7 @@ export default function HistorySection() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative w-full h-[400px]"
+            className="relative w-full h-[240px] sm:h-[320px] md:h-[400px]"
           >
             <Image
               src="/introduce/대표사인.png"

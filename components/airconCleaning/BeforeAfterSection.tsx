@@ -50,7 +50,7 @@ export default function BeforeAfterSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-[clamp(1.35rem,5.5vw,2.25rem)] font-bold leading-snug text-balance break-keep text-gray-800 mb-4">
             세척 전후 비교
           </h2>
           <p className="text-gray-600 text-lg">

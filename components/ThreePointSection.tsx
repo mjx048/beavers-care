@@ -31,19 +31,19 @@ export default function ThreePointSection() {
   ];
 
   return (
-    <section ref={ref} className="py-20 bg-white">
+    <section ref={ref} className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12 min-w-0"
         >
           <p className="text-primary font-semibold mb-2">3 Point</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-[clamp(1.35rem,5.5vw,2.25rem)] font-bold text-gray-800 mb-4 leading-snug text-balance break-keep">
             비버스케어를 선택해야하는 3가지 이유
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-600 text-[15px] md:text-lg max-w-3xl mx-auto break-keep">
             시흥·인천 공기위생 현장에서 검증된 안심 케어, 수치 기반 검증, 데이터리포트로
             병원·기업·학교에 신뢰할 수 있는 결과를 전달합니다.
           </p>
@@ -58,7 +58,7 @@ export default function ThreePointSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow bg-white"
             >
-              <div className="relative w-full h-[260px] md:h-[400px]">
+              <div className="relative w-full h-[220px] sm:h-[260px] md:h-[400px]">
                 <Image
                   src={point.image}
                   alt={point.title}
@@ -66,9 +66,9 @@ export default function ThreePointSection() {
                   className="object-contain"
                 />
               </div>
-              <div className="px-5 pb-6 pt-2">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{point.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{point.description}</p>
+              <div className="px-4 sm:px-5 pb-6 pt-2 min-w-0">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 break-keep">{point.title}</h3>
+                <p className="text-gray-600 text-[15px] md:text-base leading-relaxed break-keep">{point.description}</p>
               </div>
             </motion.div>
           ))}

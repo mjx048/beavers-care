@@ -26,7 +26,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative w-full h-[55vw] md:h-screen mt-14 md:mt-0">
+    <section className="relative w-full h-[clamp(220px,55vw,420px)] md:h-screen mt-14 md:mt-0 overflow-hidden">
       <h1 className="sr-only">
         비버스케어 — 시흥·인천 병원·기업·학교 공기위생 전문, 에어컨 세척과 소독 방역
       </h1>
@@ -75,7 +75,7 @@ export default function HeroSection() {
                         exit={{ opacity: 0, x: 100 }}
                         transition={{ duration: 1, ease: 'easeOut' }}
                       >
-                        <p className="text-white text-3xl md:text-6xl lg:text-7xl font-bold whitespace-pre-line leading-tight">
+                        <p className="text-white text-[clamp(1.5rem,7vw,4.5rem)] font-bold whitespace-pre-line leading-tight break-keep">
                           {slide.text}
                         </p>
                       </motion.div>
