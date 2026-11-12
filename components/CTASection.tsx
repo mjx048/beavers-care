@@ -103,7 +103,7 @@ export default function CTASection() {
   };
 
   return (
-    <section id="quote" ref={ref} className="py-12 md:py-20 bg-gradient-to-r from-primary to-primary/80 text-white">
+    <section id="quote" ref={ref} className="scroll-mt-20 md:scroll-mt-36 py-12 md:py-20 bg-gradient-to-r from-primary to-primary/80 text-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -113,7 +113,7 @@ export default function CTASection() {
         >
           {/* 헤더 */}
           <div className="text-center mb-8 md:mb-10">
-            <h2 className="text-[clamp(1.5rem,5.5vw,2.25rem)] font-bold mb-4 break-keep">간편 견적</h2>
+            <h2 className="text-[clamp(1.5rem,5.5vw,2.25rem)] font-bold mb-4 break-keep">간편견적 문의</h2>
             <p className="text-[15px] md:text-xl text-white/90 break-keep">
               간편 견적 문의를 남겨주시면<br />
               빠른 시일 내에 연락드리겠습니다.
@@ -124,9 +124,9 @@ export default function CTASection() {
           <div className="bg-white rounded-2xl p-4 sm:p-6 md:p-10 shadow-2xl">
             <form className="space-y-5" onSubmit={handleSubmit}>
 
-              {/* 성명 */}
+              {/* 성함 */}
               <div>
-                <label className="block text-gray-700 font-semibold mb-2">성명</label>
+                <label className="block text-gray-700 font-semibold mb-2">성함</label>
                 <input
                   type="text"
                   name="name"
