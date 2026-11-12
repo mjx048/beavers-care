@@ -7,6 +7,8 @@ import SolutionSection from '@/components/SolutionSection';
 import BeliefSection from '@/components/BeliefSection';
 import ThreePointSection from '@/components/ThreePointSection';
 import CTASection from '@/components/CTASection';
+import HomeInquirySection from '@/components/HomeInquirySection';
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -18,6 +20,7 @@ export default function Home() {
       <BeliefSection />
       <ThreePointSection />
       <CTASection />
+      <HomeInquirySection />
       <Footer />
     </main>
   );
