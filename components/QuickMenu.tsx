@@ -65,15 +65,15 @@ export default function QuickMenu() {
     {
       icon: '/quickMenu/request_home_logo.png',
       label: '가정집문의',
-      href: '/#home-inquiry',
+      href: isDesktop ? '/#home-inquiry' : smsInquiryHref,
       bgColor: '#FFFFFF',
     },
-    {
-      icon: '/quickMenu/sms_logo.png',
-      label: '문자문의',
-      href: smsInquiryHref,
-      mobileOnly: true,
-    },
+    // {
+    //   icon: '/quickMenu/sms_logo.png',
+    //   label: '문자문의',
+    //   href: smsInquiryHref,
+    //   mobileOnly: true,
+    // },
     {
       icon: '/quickMenu/call_logo.png',
       label: '전화문의',
